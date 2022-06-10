@@ -36,7 +36,7 @@
 :p4 a skos:Concept ;        # Preskription
     skos:inScheme       :scheme ;
     skos:topConceptOf   :scheme ;
-    skos:notation       "4" ;
+    skos:notation       "p4" ;
     skos:prefLabel      "Präskriptive Bewertung"@de ;
     skos:scopeNote      "Normative Einordnung eines Sachverhalts in normativen Regeln"@de ;
     skos:narrower       :p4.1 , # Obligation
@@ -46,25 +46,25 @@
 
 :p4.1 a skos:Concept ;          # Gebot
     skos:inScheme       :scheme ;
-    skos:notation       "4.1" ;
+    skos:notation       "p4.1" ;
     skos:prefLabel      "Gebot"@de ;
     skos:broader        :p4 .
 
 :p4.2 a skos:Concept ;          # Verbot
     skos:inScheme       :scheme ;
-    skos:notation       "4.2" ;
+    skos:notation       "p4.2" ;
     skos:prefLabel      "Verbot"@de ;
     skos:broader        :p4 .
 
 :p4.3 a skos:Concept ;          # Erlaubnis
     skos:inScheme       :scheme ;
-    skos:notation       "4.3" ;
+    skos:notation       "p4.3" ;
     skos:prefLabel      "Erlaubnis"@de ;
     skos:broader        :p4 .
 
 :p4.4 a skos:Concept ;          # Derogation
     skos:inScheme       :scheme ;
-    skos:notation       "4.4" ;
+    skos:notation       "p4.4" ;
     skos:altLabel       "Ausnahme"@de ;
     skos:prefLabel      "Derogation"@de;
     skos:broader        :p4 .

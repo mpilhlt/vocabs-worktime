@@ -36,7 +36,7 @@
 :a1 a skos:Concept ;        # Activity
     skos:inScheme       :scheme ;
     skos:topConceptOf   :scheme ;
-    skos:notation       "1" ;
+    skos:notation       "a1" ;
     skos:prefLabel      "Tätigkeit"@de ;
     skos:scopeNote      "Verhalten oder Tätigkeit, die Gegenstand normativer Regulierung der Arbeitszeit ist."@de ;
     skos:narrower       :a1.1 , # Smoking
@@ -54,73 +54,73 @@
 
 :a1.1 a skos:Concept ;          # Rauchen
     skos:inScheme       :scheme ;
-    skos:notation       "1.1" ;
+    skos:notation       "a1.1" ;
     skos:prefLabel      "Rauchen"@de ;
     skos:broader        :a1 .
 
 :a1.2 a skos:Concept ;          # Alkohol trinken
     skos:inScheme       :scheme ;
-    skos:notation       "1.2" ;
+    skos:notation       "a1.2" ;
     skos:prefLabel      "Alkohol trinken"@de ;
     skos:broader        :a1 .
 
 :a1.3 a skos:Concept ;          # Nahrungsaufnahme
     skos:inScheme       :scheme ;
-    skos:notation       "1.3" ;
+    skos:notation       "a1.3" ;
     skos:prefLabel      "Nahrungsaufnahme"@de ;
     skos:broader        :a1 .
 
 :a1.4 a skos:Concept ;          # Gespräche führen
     skos:inScheme       :scheme ;
-    skos:notation       "1.4" ;
+    skos:notation       "a1.4" ;
     skos:prefLabel      "Gespräche führen"@de ;
     skos:broader        :a1 .
 
 :a1.5 a skos:Concept ;          # Toilettengang
     skos:inScheme       :scheme ;
-    skos:notation       "1.5" ;
+    skos:notation       "a1.5" ;
     skos:prefLabel      "Toilettengang"@de ;
     skos:broader        :a1 .
 
 :a1.6 a skos:Concept ;          # Umkleiden
     skos:inScheme       :scheme ;
-    skos:notation       "1.6" ;
+    skos:notation       "a1.6" ;
     skos:prefLabel      "Umkleiden"@de ;
     skos:broader        :a1 .
 
 :a1.7 a skos:Concept ;          # Maschine säubern
     skos:inScheme       :scheme ;
-    skos:notation       "1.7" ;
+    skos:notation       "a1.7" ;
     skos:prefLabel      "Maschine säubern"@de ;
     skos:broader        :a1 .
 
 :a1.8 a skos:Concept ;          # Hochzeit
     skos:inScheme       :scheme ;
-    skos:notation       "1.8" ;
+    skos:notation       "a1.8" ;
     skos:prefLabel      "Hochzeit"@de ;
     skos:broader        :a1 .
 
 :a1.9 a skos:Concept ;          # Niederkunft
     skos:inScheme       :scheme ;
-    skos:notation       "1.9" ;
+    skos:notation       "a1.9" ;
     skos:prefLabel      "Niederkunft"@de ;
     skos:broader        :a1 .
 
 :a1.10 a skos:Concept ;         # Tod
     skos:inScheme       :scheme ;
-    skos:notation       "1.10" ;
+    skos:notation       "a1.10" ;
     skos:prefLabel      "Tod"@de ;
     skos:broader        :a1 .
 
 :a1.11 a skos:Concept ;         # Sich aufhalten/Betreten
     skos:inScheme       :scheme ;
-    skos:notation       "1.11" ;
+    skos:notation       "a1.11" ;
     skos:altLabel       "Betreten"@de ;
     skos:prefLabel      "Aufenthalt"@de ;
     skos:broader        :a1 .
 
 :a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
     skos:inScheme       :scheme ;
-    skos:notation       "1.12" ;
+    skos:notation       "a1.12" ;
     skos:prefLabel      "Mitbringen oder Wegnehmen"@de ;
     skos:broader        :a1 .

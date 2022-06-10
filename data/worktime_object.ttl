@@ -36,7 +36,7 @@
 :o3 a skos:Concept ;        # Object
     skos:inScheme       :scheme ;
     skos:topConceptOf   :scheme ;
-    skos:notation       "3" ;
+    skos:notation       "o3" ;
     skos:prefLabel      "Objekt"@de ;
     skos:scopeNote      "In normativen Regeln erwähntes physisches Objekt"@de ;
     skos:narrower       :o3.1 , # Signal device
@@ -48,7 +48,7 @@
 
 :o3.1 a skos:Concept ;          # Signal device
     skos:inScheme       :scheme ;
-    skos:notation       "3.1" ;
+    skos:notation       "o3.1" ;
     skos:prefLabel      "Signaleinrichtung"@de ;
     skos:narrower       :o3.1.1 ,   # Factory clock
                         :o3.1.2 ,   # Check clock
@@ -57,20 +57,20 @@
 
 :o3.1.1 a skos:Concept ;          # Fabrikuhr
     skos:inScheme       :scheme ;
-    skos:notation       "3.1.1" ;
+    skos:notation       "o3.1.1" ;
     skos:altLabel       "Uhr"@de ;
     skos:prefLabel      "Fabrikuhr"@de ;
     skos:broader        :o3.1 .
 
 :o3.1.2 a skos:Concept ;          # Stechuhr
     skos:inScheme       :scheme ;
-    skos:notation       "3.1.2" ;
+    skos:notation       "o3.1.2" ;
     skos:prefLabel      "Stechuhr"@de ;
     skos:broader        :o3.1 .
 
 :o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
     skos:inScheme       :scheme ;
-    skos:notation       "3.1.3" ;
+    skos:notation       "o3.1.3" ;
     skos:altLabel       "Sirene"@de ,
                         "Pfeife"@de,
                         "Glocke"@de ;
@@ -79,7 +79,7 @@
 
 :o3.2 a skos:Concept ;            # Schein/Marke
     skos:inScheme       :scheme ;
-    skos:notation       "3.2" ;
+    skos:notation       "o3.2" ;
     skos:altLabel       "Schein"@de ,
                         "Marke"@de ,
                         "Passierschein"@de ,
@@ -91,25 +91,25 @@
 
 :o3.3 a skos:Concept ;          # Maschine
     skos:inScheme       :scheme ;
-    skos:notation       "3.3" ;
+    skos:notation       "o3.3" ;
     skos:prefLabel      "Maschine"@de ;
     skos:broader        :o3 .
 
 :o3.4 a skos:Concept ;          # Werkzeug
     skos:inScheme       :scheme ;
-    skos:notation       "3.4" ;
+    skos:notation       "o3.4" ;
     skos:prefLabel      "Werkzeug"@de ;
     skos:broader        :o3 .
 
 :o3.5 a skos:Concept ;          # Material
     skos:inScheme       :scheme ;
-    skos:notation       "3.5" ;
+    skos:notation       "o3.5" ;
     skos:prefLabel      "Material"@de ;
     skos:broader        :o3 .
 
 :o3.6 a skos:Concept ;          # Räumlichkeit
     skos:inScheme       :scheme ;
-    skos:notation       "3.6" ;
+    skos:notation       "o3.6" ;
     skos:prefLabel      "Räumlichkeit"@de ;
     skos:narrower       :o3.6.1 ,   # Passage/border
                         :o3.6.2 ,   # Compound
@@ -120,7 +120,7 @@
 
 :o3.6.1 a skos:Concept ;        # Passage/border
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.1" ;
+    skos:notation       "o3.6.1" ;
     skos:prefLabel      "Passage/Grenze"@de ;
     skos:narrower       :o3.6.1.1 , # Weg
                         :o3.6.1.2 , # Tor
@@ -129,20 +129,20 @@
     
 :o3.6.1.1 a skos:Concept ;          # Weg
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.1.1" ;
+    skos:notation       "o3.6.1.1" ;
     skos:altLabel       "Fabrikweg"@de ;
     skos:prefLabel      "Weg"@de ;
     skos:broader        :o3.6.1 .
 
 :o3.6.1.2 a skos:Concept ;          # Tor
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.1.2" ;
+    skos:notation       "o3.6.1.2" ;
     skos:prefLabel      "Tor"@de ;
     skos:broader        :o3.6.1 .
 
 :o3.6.1.3 a skos:Concept ;          # Grenze
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.1.3" ;
+    skos:notation       "o3.6.1.3" ;
     skos:altLabel       "Zaun"@de ,
                         "Mauer"@de ;
     skos:prefLabel      "Grenze"@de ;
@@ -150,26 +150,26 @@
 
 :o3.6.2 a skos:Concept ;          # Werksgelände
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.2" ;
+    skos:notation       "o3.6.2" ;
     skos:altLabel       "Gelände"@de ;
     skos:prefLabel      "Werksgelände"@de ;
     skos:broader        :o3.6 .
 
 :o3.6.3 a skos:Concept ;          # Kesselhaus
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.3" ;
+    skos:notation       "o3.6.3" ;
     skos:prefLabel      "Kesselhaus"@de ;
     skos:broader        :o3.6 .
 
 :o3.6.4 a skos:Concept ;          # Werkstatt
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.4" ;
+    skos:notation       "o3.6.4" ;
     skos:prefLabel      "Werkstatt"@de ;
     skos:broader        :o3.6 .
 
 :o3.6.5 a skos:Concept ;          # Hof
     skos:inScheme       :scheme ;
-    skos:notation       "3.6.5" ;
+    skos:notation       "o3.6.5" ;
     skos:prefLabel      "Hof"@de ;
     skos:broader        :o3.6 .
 

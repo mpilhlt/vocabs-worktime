@@ -36,7 +36,7 @@
 :m5 a skos:Concept ;        # Condition of force
     skos:inScheme       :scheme ;
     skos:topConceptOf   :scheme ;
-    skos:notation       "5" ;
+    skos:notation       "m5" ;
     skos:prefLabel      "Bedingung der Geltung"@de ;
     skos:narrower       :m5.1 , # Time
                         :m5.2 , # Ground norm
@@ -44,20 +44,20 @@
 
 :m5.1 a skos:Concept ;          # Geltungszeitregel
     skos:inScheme       :scheme ;
-    skos:notation       "5.1" ;
+    skos:notation       "m5.1" ;
     skos:altLabel       "Inkrafttreten"@de ;
     skos:prefLabel      "Geltungszeitregel"@de ;
     skos:broader        :m5 .
 
 :m5.2 a skos:Concept ;          # Ermächtigungsnorm
     skos:inScheme       :scheme ;
-    skos:notation       "5.2" ;
+    skos:notation       "m5.2" ;
     skos:altLabel       "Rechtsgrundlage"@de ;
     skos:prefLabel      "Ermächtigungsnorm"@de ;
     skos:broader        :m5 .
 
 :m5.3 a skos:Concept ;          # Streitbeilegung
     skos:inScheme       :scheme ;
-    skos:notation       "5.3" ;
+    skos:notation       "m5.3" ;
     skos:prefLabel      "Streitbeilegung"@de ;
     skos:broader        :m5 .

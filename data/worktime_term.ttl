@@ -36,7 +36,7 @@
 :t0 a skos:Concept ;        # Regulatory Concept
     skos:inScheme       :scheme ;
     skos:topConceptOf   :scheme ;
-    skos:notation       "0" ;
+    skos:notation       "t0" ;
     skos:prefLabel      "Regelungsbegriff"@de ;
     skos:scopeNote      "Regulativer Begriff"@de ;
     skos:narrower       :t0.1 , # Working time
@@ -50,7 +50,7 @@
 
 :t0.1 a skos:Concept ;          # Working time
     skos:inScheme       :scheme ;
-    skos:notation       "0.1" ;
+    skos:notation       "t0.1" ;
     skos:prefLabel      "Arbeitszeit"@de ;
     skos:narrower       :t0.1.1 ,   # Workday
                         :t0.1.2 ;   # Duration
@@ -58,7 +58,7 @@
 
 :t0.1.1 a skos:Concept ;        # Workday
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.1" ;
+    skos:notation       "t0.1.1" ;
     skos:prefLabel      "Arbeitstag"@de ;
     skos:narrower       :t0.1.1.1 ,
                         :t0.1.1.2 ;
@@ -66,14 +66,14 @@
 
 :t0.1.1.1 a skos:Concept ;      # regular workday
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.1.1" ;
+    skos:notation       "t0.1.1.1" ;
     skos:prefLabel      "Regulärer Werktag"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. Montags von früh 7 bis Abends 8 Uhr, Sonnabends von früh 6 bis Abends 5 Uhr, ***alle übrigen Arbeitstage*** von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
     skos:broader        :t0.1.1 .
 
 :t0.1.1.2 a skos:Concept ;      # extraordinary workday
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.1.2" ;
+    skos:notation       "t0.1.1.2" ;
     skos:prefLabel      "Sonderwerktag"@de ;
     skos:broader        :t0.1.1 ;
     skos:narrower       :t0.1.1.2.1 ,
@@ -81,14 +81,14 @@
 
 :t0.1.1.2.1 a skos:Concept ;    # Monday
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.1.2.1" ;
+    skos:notation       "t0.1.1.2.1" ;
     skos:prefLabel      "Montag"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. ***Montags von*** früh 7 bis Abends 8 Uhr, Sonnabends von früh 6 bis Abends 5 Uhr, alle übrigen Arbeitstage von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
     skos:broader        :t0.1.1.2 .
 
 :t0.1.1.2.2 a skos:Concept ;    # Saturday
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.1.2.2" ;
+    skos:notation       "t0.1.1.2.2" ;
     skos:altLabel       "Samstag"@de ;
     skos:prefLabel      "Sonnabend"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. Montags von früh 7 bis Abends 8 Uhr, ***Sonnabends*** von früh 6 bis Abends 5 Uhr, alle übrigen Arbeitstage von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
@@ -96,7 +96,7 @@
 
 :t0.1.2 a skos:Concept ;        # Duration
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.2" ;
+    skos:notation       "t0.1.2" ;
     skos:prefLabel      "Arbeitsdauer"@de ;
     skos:narrower       :t0.1.2.1 ,
                         :t0.1.2.2 ;
@@ -104,39 +104,39 @@
 
 :t0.1.2.1 a skos:Concept ;      # Duration, daily
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.2.1" ;
+    skos:notation       "t0.1.2.1" ;
     skos:prefLabel      "Arbeitsdauer, täglich"@de ;
     skos:broader        :t0.1.2 .
 
 :t0.1.2.2 a skos:Concept ;      # Duration, weekly
     skos:inScheme       :scheme ;
-    skos:notation       "0.1.2.2" ;
+    skos:notation       "t0.1.2.2" ;
     skos:prefLabel      "Arbeitsdauer, wöchentlich"@de ;
     skos:broader        :t0.1.2 .
 
 :t0.2 a skos:Concept ;          # Overwork
     skos:inScheme       :scheme ;
-    skos:notation       "0.2" ;
+    skos:notation       "t0.2" ;
     skos:prefLabel      "Überarbeit"@de ;
     skos:example        "Zur Leistung von ***Ueberstunden***, welche über die normale, in der Arbeitsordnung festgesetzten Zeit hinausgehen und nach Möglichkeit vermieden werden, sowie zur Nachtarbeit sind Arbeitnehmer, wenn nicht ein genügender Entschuldigungsgrund vorliegt, nach Maßgabe der hierfür geltenden gesetzlichen Vorschriften verpflichtet. (`00013_AO_Entwurf_unbekannt_1912`)"@de ;
     skos:broader        :t0 .
 
 :t0.3 a skos:Concept ;          # Nighttime work
     skos:inScheme       :scheme ;
-    skos:notation       "0.3" ;
+    skos:notation       "t0.3" ;
     skos:prefLabel      "Nachtarbeit"@de ;
     skos:example        "Zur Leistung von Ueberstunden, welche über die normale, in der Arbeitsordnung festgesetzten Zeit hinausgehen und nach Möglichkeit vermieden werden, sowie zur ***Nachtarbeit*** sind Arbeitnehmer, wenn nicht ein genügender Entschuldigungsgrund vorliegt, nach Maßgabe der hierfür geltenden gesetzlichen Vorschriften verpflichtet. (`00013_AO_Entwurf_unbekannt_1912`)"@de ;
     skos:broader        :t0 .
 
 :t0.4 a skos:Concept ;          # Work on holidays
     skos:inScheme       :scheme ;
-    skos:notation       "0.4" ;
+    skos:notation       "t0.4" ;
     skos:prefLabel      "Sonn-/Feiertagsarbeit"@de ;
     skos:broader        :t0 .
 
 :t0.5 a skos:Concept ;          # Absence
     skos:inScheme       :scheme ;
-    skos:notation       "0.5" ;
+    skos:notation       "t0.5" ;
     skos:prefLabel      "Abwesenheit"@de ;
     skos:narrower       :t0.5.1 ,   # Break
                         :t0.5.2 ,   # Training
@@ -150,57 +150,57 @@
 
 :t0.5.1 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.1" ;
+    skos:notation       "t0.5.1" ;
     skos:prefLabel      "Pause"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.2 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.2" ;
+    skos:notation       "t0.5.2" ;
     skos:altLabel       "Fortbildung"@de ;
     skos:prefLabel      "Schulung"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.3 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.3" ;
+    skos:notation       "t0.5.3" ;
     skos:prefLabel      "Urlaub"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.4 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.4" ;
+    skos:notation       "t0.5.4" ;
     skos:prefLabel      "Betriebsunfall"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.5 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.5" ;
+    skos:notation       "t0.5.5" ;
     skos:prefLabel      "Sozialer Grund"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.6 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.6" ;
+    skos:notation       "t0.5.6" ;
     skos:altLabel       "Zuspätkommen"@de ;
     skos:prefLabel      "Verspätung"@de;
     skos:broader        :t0.5 .
 
 :t0.5.7 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.7" ;
+    skos:notation       "t0.5.7" ;
     skos:prefLabel      "Blauer Montag"@de ;
     skos:broader        :t0.5 .
 
 :t0.5.8 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.5.8" ;
+    skos:notation       "t0.5.8" ;
     skos:prefLabel      "Krankheit"@de ;
     skos:broader        :t0.5 .
 
 :t0.6 a skos:Concept ;          # Control mechanism
     skos:inScheme       :scheme ;
-    skos:notation       "0.6" ;
+    skos:notation       "t0.6" ;
     skos:prefLabel      "Kontrolle"@de ;
     skos:narrower       :t0.6.1 , # Equipment
                         :t0.6.2 , # Bearer
@@ -210,20 +210,20 @@
 
 :t0.6.1 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.1" ;
+    skos:notation       "t0.6.1" ;
     skos:prefLabel      "Kontrolleinrichtung"@de ;
     skos:broader        :t0.6 .
 
 :t0.6.2 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.2" ;
+    skos:notation       "t0.6.2" ;
     skos:prefLabel      "Träger der Kontrolle"@de ;
     skos:scopeNote      "*Träger der Kontrolle* ist eine ***thematische*** Rolle (im Interaktionsrahmen *Kontrolle*), sie kann ggf. durch Personen wahrgenommen werden, die anhand ihrer ***sozialen*** Rolle oder Funktion (*Meister*, *Pförtner*) identifiziert werden."@de ;
     skos:broader        :t0.6 .
 
 :t0.6.3 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.3" ;
+    skos:notation       "t0.6.3" ;
     skos:prefLabel      "Meldung"@de ;
     skos:narrower       :t0.6.3.1 , # Deadline
                         :t0.6.3.2 ; # Acceptor
@@ -231,20 +231,20 @@
 
 :t0.6.3.1 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.3.1" ;
+    skos:notation       "t0.6.3.1" ;
     skos:prefLabel      "Frist"@de ;
     skos:broader        :t0.6.3 .
 
 :t0.6.3.2 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.3.2" ;
+    skos:notation       "t0.6.3.2" ;
     skos:prefLabel      "Meldungsempfänger"@de ;
     skos:scopeNote      "*Meldungsempfänger* ist eine ***thematische*** Rolle (im Interaktionsrahmen *Kontrolle*), sie kann durch Personen wahrgenommen werden, die anhand ihrer ***sozialen*** Rolle oder Funktion (*Meister*, *Pförtner*) identifiziert werden."@de ;
     skos:broader        :t0.6.3 .
 
 :t0.6.4 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.4" ;
+    skos:notation       "t0.6.4" ;
     skos:prefLabel      "Kontrolltechnik"@de ;
     skos:narrower       :t0.6.4.1 , # Self-Control
                         :t0.6.4.2 ; # Disciplinary
@@ -252,19 +252,19 @@
 
 :t0.6.4.1 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.4.1" ;
+    skos:notation       "t0.6.4.1" ;
     skos:prefLabel      "Selbstkontrolle"@de ;
     skos:broader        :t0.6.4 .
 
 :t0.6.4.2 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.6.4.2" ;
+    skos:notation       "t0.6.4.2" ;
     skos:prefLabel      "Disziplinarische Kontrolle"@de ;
     skos:broader        :t0.6.4 .
 
 :t0.7 a skos:Concept ;          # Punishment
     skos:inScheme       :scheme ;
-    skos:notation       "0.7" ;
+    skos:notation       "t0.7" ;
     skos:prefLabel      "Strafe"@de ;
     skos:narrower       :t0.7.1 ,   # Monetary fine
                         :t0.7.2 ,   # Lock-out
@@ -275,26 +275,26 @@
 
 :t0.7.1 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.7.1" ;
+    skos:notation       "t0.7.1" ;
     skos:prefLabel      "Geldstrafe"@de ;
     skos:broader        :t0.7 .
 
 :t0.7.2 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.7.2" ;
+    skos:notation       "t0.7.2" ;
     skos:prefLabel      "Aussperrung"@de ;
     skos:broader        :t0.7 .
 
 :t0.7.3 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.7.3" ;
+    skos:notation       "t0.7.3" ;
     skos:altLabel       "Abmahnung"@de ;
     skos:prefLabel      "Verwarnung"@de ;
     skos:broader        :t0.7 .
 
 :t0.7.4 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.7.4" ;
+    skos:notation       "t0.7.4" ;
     skos:altLabel       "Entlassung"@de ,
                         "fristlose Kündigung"@de ;
     skos:prefLabel      "Kündigung"@de ;
@@ -302,7 +302,7 @@
 
 :t0.7.5 a skos:Concept ;
     skos:inScheme       :scheme ;
-    skos:notation       "0.7.5" ;
+    skos:notation       "t0.7.5" ;
     skos:altLabel       "Herabstufung"@de ,
                         "Zurückstufung"@de ,
                         "Degradierung"@de ;
@@ -311,7 +311,7 @@
 
 :t0.8 a skos:Concept ;          # Incentive
     skos:inScheme       :scheme ;
-    skos:notation       "0.8" ;
+    skos:notation       "t0.8" ;
     skos:altLabel       "Belohnung"@de ,
                         "Prämie"@de ;
     skos:prefLabel      "Anreiz"@de ;
