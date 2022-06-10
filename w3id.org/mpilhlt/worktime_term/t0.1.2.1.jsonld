@@ -7,7 +7,7 @@
     "de": "Arbeitsdauer, täglich"
   },
   "notation": [
-    "0.1.2.1"
+    "t0.1.2.1"
   ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_term/t0.1.2",

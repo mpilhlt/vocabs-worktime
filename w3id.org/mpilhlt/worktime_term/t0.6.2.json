@@ -10,7 +10,7 @@
     "de": "*Träger der Kontrolle* ist eine ***thematische*** Rolle (im Interaktionsrahmen *Kontrolle*), sie kann ggf. durch Personen wahrgenommen werden, die anhand ihrer ***sozialen*** Rolle oder Funktion (*Meister*, *Pförtner*) identifiziert werden."
   },
   "notation": [
-    "0.6.2"
+    "t0.6.2"
   ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_term/t0.6",
