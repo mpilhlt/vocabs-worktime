@@ -8,7 +8,11 @@
   },
   "altLabel": {
     "de": [
-      "Funktion"
+      "Funktion",
+      "soziale Rolle"
+    ],
+    "en": [
+      "Function"
     ]
   },
   "definition": {
@@ -66,7 +70,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_role/r2.8",
       "prefLabel": {
-        "de": "Portier"
+        "de": "Portier",
+        "en": "Porter"
       }
     },
     {
@@ -145,7 +150,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_role/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen",
+      "en": "MPILHLT concepts of regulations of working time, social roles"
     }
   },
   "topConceptOf": {

@@ -4,7 +4,8 @@
   "followers": "https://test.skohub.io/followers?subject=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_role%2Fr2.8",
   "inbox": "https://test.skohub.io/inbox?target=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_role%2Fr2.8",
   "prefLabel": {
-    "de": "Portier"
+    "de": "Portier",
+    "en": "Porter"
   },
   "altLabel": {
     "de": [
@@ -23,7 +24,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_role/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen",
+      "en": "MPILHLT concepts of regulations of working time, social roles"
     }
   },
   "@context": {
