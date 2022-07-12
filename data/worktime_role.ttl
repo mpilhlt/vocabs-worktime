@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mpilhlt/worktime_role/> .
+@prefix wtr: <https://w3id.org/mpilhlt/worktime_role/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,9 +7,11 @@
 @prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, soziale Rollen"@de ;
+wtr:scheme a skos:ConceptScheme ;
+    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ,
+                        "MPILHLT concepts of regulations of working time, social roles"@en ;
+    dct:description     "Begriffsschema für Arbeitszeitregelungen, soziale Rollen"@de ,
+                        "Concept scheme for regulations of working time, social roles"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2020-06-07"^^xsd:date ;
@@ -22,189 +24,193 @@
                         "Vesper, Tim-Niklas",
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
-    dct:license         "cczero" ;
+    dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 1.0.0. URL: <https://w3id.org/mpilhlt/worktime_role/1.0.0>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtr" ;
-    vann:preferredNamespaceUri "https://w3id.org/mpilhlt/worktime_role/" ;
+    vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_role/> ;
     owl:versionInfo     "0.0.2" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_role/1.0.0> ;
     vs:term_status      "testing" ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ;
-    skos:hasTopConcept  :r2 . # Role/function
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ,
+                        "MPILHLT concepts of regulations of working time, social roles"@en ;
+    skos:hasTopConcept  wtr:r2 . # Role/function
 
-:r2 a skos:Concept ;        # Social Role/Function
-    skos:inScheme       :scheme ;
-    skos:topConceptOf   :scheme ;
+wtr:r2 a skos:Concept ;        # Social Role/Function
+    skos:inScheme       wtr:scheme ;
+    skos:topConceptOf   wtr:scheme ;
     skos:notation       "r2" ;
-    skos:altLabel       "Funktion"@de ;
+    skos:altLabel       "Funktion"@de ,
+                        "soziale Rolle"@de ,
+                        "Function"@en ;
     skos:prefLabel      "Rolle"@de ;
     skos:definition     "Von normativen Regeln definierte oder in ihnen erwähnte soziale Rolle oder Kategorie von Personen"@de ;
     skos:scopeNote      "Durch eine Berufsbezeichnung ('Pförtner'), die Funktion im allgemeinen Betrieb ('Vorarbeiter') oder den sozialen Kontext ('jugendliche Arbeiter') bestimmte Erwartungsbündel an die so qualifizierten Personen, die von der aktuell vorliegenden Handlung unabhängig sind. Davon zu unterscheiden sind Rollen, die die Aufgabenverteilung in konkreten Interaktionen bestimmen (Kauf: 'Käufer', 'Verkäufer'). Erstere werden in der Literatur häufig als 'soziale Rollen' diskutiert, letztere als 'thematische Rollen'. Häufig beziehen sich normative Regelungen darauf, dass die Wahrnehmung bestimmter thematischer Rollen an die soziale Rolle gebunden ist (z.B. mag die thematische Rolle des 'Meldungsempfängers' in bestimmten Kontexten der Meldung von Abwesenheit den 'Meistern' vorbehalten sein. Vgl. Goy et al.: 'On the role of thematic roles in a historical event ontology', in: Applied Ontology, vol. 13, no. 1, pp. 19-39, 2018. DOI: 10.3233/AO-170192, <https://content.iospress.com/articles/applied-ontology/ao192>; Masolo, et al: 'Social Roles and Their Descriptions', in: In D. Dubois, C. Welty and M.A. Williams (Eds.), Proc. KR2004, Palo Alto, CA: AAAI Press, 2004, pp. 267–277. <http://www.loa.istc.cnr.it/old/Papers/KR04MasoloC.pdf>."@de ;
-    skos:narrower       :r2.1 , # Male adult worker
-                        :r2.2 , # Female adult worker
-                        :r2.3 , # Clerk
-                        :r2.4 , # Supervisor
-                        :r2.5 , # Master
-                        :r2.6 , # Juvenile worker
-                        :r2.7 , # Woman who has recently given birth
-                        :r2.8 , # Doorkeeper
-                        :r2.9 , # Works manager
-                        :r2.10 , # external persons
-                        :r2.11 , # stakeholder
-                        :r2.12 , # owner
-                        :r2.13 , # assistant
-                        :r2.14 , # foreman
-                        :r2.15 , # maschinist
-                        :r2.16 , # civil servant
-                        :r2.17 , # technician
-                        :r2.18 , # "simple" pension fund member
-                        :r2.19 , # conscript
-                        :r2.20 . # Vermindert Erwerbsfähige
+    skos:narrower       wtr:r2.1 , # Male adult worker
+                        wtr:r2.2 , # Female adult worker
+                        wtr:r2.3 , # Clerk
+                        wtr:r2.4 , # Supervisor
+                        wtr:r2.5 , # Master
+                        wtr:r2.6 , # Juvenile worker
+                        wtr:r2.7 , # Woman who has recently given birth
+                        wtr:r2.8 , # Doorkeeper
+                        wtr:r2.9 , # Works manager
+                        wtr:r2.10 , # external persons
+                        wtr:r2.11 , # stakeholder
+                        wtr:r2.12 , # owner
+                        wtr:r2.13 , # assistant
+                        wtr:r2.14 , # foreman
+                        wtr:r2.15 , # maschinist
+                        wtr:r2.16 , # civil servant
+                        wtr:r2.17 , # technician
+                        wtr:r2.18 , # "simple" pension fund member
+                        wtr:r2.19 , # conscript
+                        wtr:r2.20 . # Vermindert Erwerbsfähige
 
-:r2.1 a skos:Concept ;          # Erwachsener Arbeiter
-    skos:inScheme       :scheme ;
+wtr:r2.1 a skos:Concept ;          # Erwachsener Arbeiter
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.1" ;
     skos:prefLabel      "Erwachsener Arbeiter"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.2 a skos:Concept ;          # Erwachsene Arbeiterin
-    skos:inScheme       :scheme ;
+wtr:r2.2 a skos:Concept ;          # Erwachsene Arbeiterin
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.2" ;
     skos:prefLabel      "Erwachsene Arbeiterin"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.3 a skos:Concept ;          # Angestellter/Angestellte
-    skos:inScheme       :scheme ;
+wtr:r2.3 a skos:Concept ;          # Angestellter/Angestellte
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.3" ;
     skos:prefLabel      "Angestellter/Angestellte"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.4 a skos:Concept ;          # Vorgesetzer
-    skos:inScheme       :scheme ;
+wtr:r2.4 a skos:Concept ;          # Vorgesetzer
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.4" ;
     skos:prefLabel      "Vorgesetzer"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.5 a skos:Concept ;          # Meister
-    skos:inScheme       :scheme ;
+wtr:r2.5 a skos:Concept ;          # Meister
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.5" ;
     skos:prefLabel      "Meister"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.6 a skos:Concept ;          # Jugendliche/r Arbeiter/in
-    skos:inScheme       :scheme ;
+wtr:r2.6 a skos:Concept ;          # Jugendliche/r Arbeiter/in
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.6" ;
     skos:prefLabel      "Jugendliche/r Arbeiter/in"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.7 a skos:Concept ;          # Wöchnerin
-    skos:inScheme       :scheme ;
+wtr:r2.7 a skos:Concept ;          # Wöchnerin
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.7" ;
     skos:prefLabel      "Wöchnerin"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.8 a skos:Concept ;          # Portier
-    skos:inScheme       :scheme ;
+wtr:r2.8 a skos:Concept ;          # Portier
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.8" ;
     skos:altLabel       "Pförtner"@de ;
-    skos:prefLabel      "Portier"@de ;
-    skos:broader        :r2 .
+    skos:prefLabel      "Portier"@de ,
+                        "Porter"@en ;
+    skos:broader        wtr:r2 .
 
-:r2.9 a skos:Concept ;          # Betriebsführer
-    skos:inScheme       :scheme ;
+wtr:r2.9 a skos:Concept ;          # Betriebsführer
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.9" ;
     skos:prefLabel      "Betriebsführer"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.10 a skos:Concept ;         # betriebsfremde Person
-    skos:inScheme       :scheme ;
+wtr:r2.10 a skos:Concept ;         # betriebsfremde Person
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.10" ;
     skos:prefLabel      "betriebsfremde Person"@de ;
-    skos:narrower       :r2.10.1 ,  # Wife
-                        :r2.10.2 ,  # Husband
-                        :r2.10.3 ;  # Child
-    skos:broader        :r2 .
+    skos:narrower       wtr:r2.10.1 ,  # Wife
+                        wtr:r2.10.2 ,  # Husband
+                        wtr:r2.10.3 ;  # Child
+    skos:broader        wtr:r2 .
 
-:r2.10.1 a skos:Concept ;
-    skos:inScheme       :scheme ;
+wtr:r2.10.1 a skos:Concept ;
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.10.1" ;
     skos:prefLabel      "Ehefrau"@de ;
-    skos:broader        :r2.10 .
+    skos:broader        wtr:r2.10 .
 
-:r2.10.2 a skos:Concept ;
-    skos:inScheme       :scheme ;
+wtr:r2.10.2 a skos:Concept ;
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.10.2" ;
     skos:prefLabel      "Ehemann"@de ;
-    skos:broader        :r2.10 .
+    skos:broader        wtr:r2.10 .
 
-:r2.10.3 a skos:Concept ;
-    skos:inScheme       :scheme ;
+wtr:r2.10.3 a skos:Concept ;
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.10.3" ;
     skos:prefLabel      "Kind"@de ;
-    skos:broader        :r2.10 .
+    skos:broader        wtr:r2.10 .
 
-:r2.11 a skos:Concept ;         # Interessenvertreter
-    skos:inScheme       :scheme ;
+wtr:r2.11 a skos:Concept ;         # Interessenvertreter
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.11" ;
     skos:altLabel       "Arbeiterrat"@de ,
                         "Vertrauensrat"@de ;
     skos:prefLabel      "Interessenvertreter"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.12 a skos:Concept ;         # Fabrik-/Unternehmensbesitzer
-    skos:inScheme       :scheme ;
+wtr:r2.12 a skos:Concept ;         # Fabrik-/Unternehmensbesitzer
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.12" ;
     skos:altLabel       "Besitzer"@de ;
     skos:prefLabel      "Fabrik-/Unternehmensbesitzer"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.13 a skos:Concept ;         # (Handlungs-)Gehilfe
-    skos:inScheme       :scheme ;
+wtr:r2.13 a skos:Concept ;         # (Handlungs-)Gehilfe
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.13" ;
     skos:altLabel       "Handlungsgehilfe"@de ;
     skos:prefLabel      "Gehilfe"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.14 a skos:Concept ;         # Vorarbeiter
-    skos:inScheme       :scheme ;
+wtr:r2.14 a skos:Concept ;         # Vorarbeiter
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.14" ;
     skos:prefLabel      "Vorarbeiter"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.15 a skos:Concept ;         # Maschinist
-    skos:inScheme       :scheme ;
+wtr:r2.15 a skos:Concept ;         # Maschinist
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.15" ;
     skos:prefLabel      "Maschinist"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.16 a skos:Concept ;         # Beamter
-    skos:inScheme       :scheme ;
+wtr:r2.16 a skos:Concept ;         # Beamter
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.16" ;
     skos:prefLabel      "Beamter"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.17 a skos:Concept ;         # Techniker
-    skos:inScheme       :scheme ;
+wtr:r2.17 a skos:Concept ;         # Techniker
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.17" ;
     skos:prefLabel      "Techniker"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.18 a skos:Concept ;         # ("einfaches") Kassenmitglied
-    skos:inScheme       :scheme ;
+wtr:r2.18 a skos:Concept ;         # ("einfaches") Kassenmitglied
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.18" ;
     skos:altLabel       "'einfaches' Kassenmitglied"@de ;
     skos:prefLabel      "Kassenmitglied"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.19 a skos:Concept ;         # Militärpflichtiger
-    skos:inScheme       :scheme ;
+wtr:r2.19 a skos:Concept ;         # Militärpflichtiger
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.19" ;
     skos:prefLabel      "Militärpflichtiger"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
 
-:r2.20 a skos:Concept ;         # vermindert Erwerbsfähiger
-    skos:inScheme       :scheme ;
+wtr:r2.20 a skos:Concept ;         # vermindert Erwerbsfähiger
+    skos:inScheme       wtr:scheme ;
     skos:notation       "r2.20" ;
     skos:prefLabel      "vermindert Erwerbsfähiger"@de ;
-    skos:broader        :r2 .
+    skos:broader        wtr:r2 .
