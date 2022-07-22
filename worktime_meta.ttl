@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mpilhlt/worktime_meta/> .
+@prefix wtm: <https://w3id.org/mpilhlt/worktime_meta/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,9 +7,13 @@
 @prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, reflexive und Meta-Angaben"@de ;
+wtm:scheme a skos:ConceptScheme ;
+    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ,
+                        "MPILHLT concepts of regulations of working time, reflexive and meta-aspects"@en ;
+    dct:description     "Begriffsschema für Arbeitszeitregelungen, reflexive und Meta-Angaben"@de ,
+                        "Concept scheme for regulations of working time, reflexive and meta-aspects"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ,
+                        "MPILHLT concepts of regulations of working time, reflexive and meta-aspects"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2020-06-07"^^xsd:date ;
@@ -22,42 +26,41 @@
                         "Vesper, Tim-Niklas",
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
-    dct:license         "cczero" ;
+    dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 1.0.0. URL: <https://w3id.org/mpilhlt/worktime_meta/1.0.0>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtm" ;
-    vann:preferredNamespaceUri "https://w3id.org/mpilhlt/worktime_meta/" ;
+    vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_meta/> ;
     owl:versionInfo     "0.0.2" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_meta/1.0.0> ;
     vs:term_status      "testing" ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ;
-    skos:hasTopConcept  :m5 . # Condition of being in force
+    skos:hasTopConcept  wtm:m5 . # Condition of being in force
 
-:m5 a skos:Concept ;        # Condition of force
-    skos:inScheme       :scheme ;
-    skos:topConceptOf   :scheme ;
+wtm:m5 a skos:Concept ;        # Condition of force
+    skos:inScheme       wtm:scheme ;
+    skos:topConceptOf   wtm:scheme ;
     skos:notation       "m5" ;
     skos:prefLabel      "Bedingung der Geltung"@de ;
-    skos:narrower       :m5.1 , # Time
-                        :m5.2 , # Ground norm
-                        :m5.3 . # Dispute resolution
+    skos:narrower       wtm:m5.1 , # Time
+                        wtm:m5.2 , # Ground norm
+                        wtm:m5.3 . # Dispute resolution
 
-:m5.1 a skos:Concept ;          # Geltungszeitregel
-    skos:inScheme       :scheme ;
+wtm:m5.1 a skos:Concept ;          # Geltungszeitregel
+    skos:inScheme       wtm:scheme ;
     skos:notation       "m5.1" ;
     skos:altLabel       "Inkrafttreten"@de ;
     skos:prefLabel      "Geltungszeitregel"@de ;
-    skos:broader        :m5 .
+    skos:broader        wtm:m5 .
 
-:m5.2 a skos:Concept ;          # Ermächtigungsnorm
-    skos:inScheme       :scheme ;
+wtm:m5.2 a skos:Concept ;          # Ermächtigungsnorm
+    skos:inScheme       wtm:scheme ;
     skos:notation       "m5.2" ;
     skos:altLabel       "Rechtsgrundlage"@de ;
     skos:prefLabel      "Ermächtigungsnorm"@de ;
-    skos:broader        :m5 .
+    skos:broader        wtm:m5 .
 
-:m5.3 a skos:Concept ;          # Streitbeilegung
-    skos:inScheme       :scheme ;
+wtm:m5.3 a skos:Concept ;          # Streitbeilegung
+    skos:inScheme       wtm:scheme ;
     skos:notation       "m5.3" ;
     skos:prefLabel      "Streitbeilegung"@de ;
-    skos:broader        :m5 .
+    skos:broader        wtm:m5 .

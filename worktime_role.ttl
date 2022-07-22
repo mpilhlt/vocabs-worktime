@@ -12,6 +12,8 @@ wtr:scheme a skos:ConceptScheme ;
                         "MPILHLT concepts of regulations of working time, social roles"@en ;
     dct:description     "Begriffsschema für Arbeitszeitregelungen, soziale Rollen"@de ,
                         "Concept scheme for regulations of working time, social roles"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ,
+                        "MPILHLT concepts of regulations of working time, social roles"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2020-06-07"^^xsd:date ;
@@ -32,8 +34,6 @@ wtr:scheme a skos:ConceptScheme ;
     owl:versionInfo     "0.0.2" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_role/1.0.0> ;
     vs:term_status      "testing" ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen"@de ,
-                        "MPILHLT concepts of regulations of working time, social roles"@en ;
     skos:hasTopConcept  wtr:r2 . # Role/function
 
 wtr:r2 a skos:Concept ;        # Social Role/Function

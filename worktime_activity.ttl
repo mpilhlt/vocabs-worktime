@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mpilhlt/worktime_activity/> .
+@prefix wta: <https://w3id.org/mpilhlt/worktime_activity/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,9 +7,13 @@
 @prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, Tätigkeiten"@de ;
+wta:scheme a skos:ConceptScheme ;
+    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ,
+                        "MPILHLT concepts of regulations of working time, activities"@en ;
+    dct:description     "Begriffsschema für Arbeitszeitregelungen, Tätigkeiten"@de ,
+                        "Concept scheme for regulations of working time, activities"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ,
+                        "MPILHLT concepts of regulations of working time, activities"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2020-06-07"^^xsd:date ;
@@ -22,105 +26,104 @@
                         "Vesper, Tim-Niklas",
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
-    dct:license         "cczero" ;
+    dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 1.0.0. URL: <https://w3id.org/mpilhlt/worktime_activity/1.0.0>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wta" ;
-    vann:preferredNamespaceUri "https://w3id.org/mpilhlt/worktime_activity/" ;
+    vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_activity/> ;
     owl:versionInfo     "0.0.2" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_activity/1.0.0> ;
     vs:term_status      "testing" ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ;
-    skos:hasTopConcept  :a1 . # Activity
+    skos:hasTopConcept  wta:a1 . # Activity
 
-:a1 a skos:Concept ;        # Activity
-    skos:inScheme       :scheme ;
-    skos:topConceptOf   :scheme ;
+wta:a1 a skos:Concept ;        # Activity
+    skos:inScheme       wta:scheme ;
+    skos:topConceptOf   wta:scheme ;
     skos:notation       "a1" ;
     skos:prefLabel      "Tätigkeit"@de ;
     skos:scopeNote      "Verhalten oder Tätigkeit, die Gegenstand normativer Regulierung der Arbeitszeit ist."@de ;
-    skos:narrower       :a1.1 , # Smoking
-                        :a1.2 , # Drinking alcohol
-                        :a1.3 , # Eating
-                        :a1.4 , # Talking
-                        :a1.5 , # Going to the toilet
-                        :a1.6 , # Changing clothes
-                        :a1.7 , # Cleaning tools & machinery
-                        :a1.8 , # Wedding
-                        :a1.9 , # Giving birth
-                        :a1.10 , # Dying
-                        :a1.11 , # Tarrying/Walking/Accessing
-                        :a1.12 .
+    skos:narrower       wta:a1.1 , # Smoking
+                        wta:a1.2 , # Drinking alcohol
+                        wta:a1.3 , # Eating
+                        wta:a1.4 , # Talking
+                        wta:a1.5 , # Going to the toilet
+                        wta:a1.6 , # Changing clothes
+                        wta:a1.7 , # Cleaning tools & machinery
+                        wta:a1.8 , # Wedding
+                        wta:a1.9 , # Giving birth
+                        wta:a1.10 , # Dying
+                        wta:a1.11 , # Tarrying/Walking/Accessing
+                        wta:a1.12 .
 
-:a1.1 a skos:Concept ;          # Rauchen
-    skos:inScheme       :scheme ;
+wta:a1.1 a skos:Concept ;          # Rauchen
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.1" ;
     skos:prefLabel      "Rauchen"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.2 a skos:Concept ;          # Alkohol trinken
-    skos:inScheme       :scheme ;
+wta:a1.2 a skos:Concept ;          # Alkohol trinken
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.2" ;
     skos:prefLabel      "Alkohol trinken"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.3 a skos:Concept ;          # Nahrungsaufnahme
-    skos:inScheme       :scheme ;
+wta:a1.3 a skos:Concept ;          # Nahrungsaufnahme
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.3" ;
     skos:prefLabel      "Nahrungsaufnahme"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.4 a skos:Concept ;          # Gespräche führen
-    skos:inScheme       :scheme ;
+wta:a1.4 a skos:Concept ;          # Gespräche führen
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.4" ;
     skos:prefLabel      "Gespräche führen"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.5 a skos:Concept ;          # Toilettengang
-    skos:inScheme       :scheme ;
+wta:a1.5 a skos:Concept ;          # Toilettengang
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.5" ;
     skos:prefLabel      "Toilettengang"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.6 a skos:Concept ;          # Umkleiden
-    skos:inScheme       :scheme ;
+wta:a1.6 a skos:Concept ;          # Umkleiden
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.6" ;
     skos:prefLabel      "Umkleiden"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.7 a skos:Concept ;          # Maschine säubern
-    skos:inScheme       :scheme ;
+wta:a1.7 a skos:Concept ;          # Maschine säubern
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.7" ;
     skos:prefLabel      "Maschine säubern"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.8 a skos:Concept ;          # Hochzeit
-    skos:inScheme       :scheme ;
+wta:a1.8 a skos:Concept ;          # Hochzeit
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.8" ;
     skos:prefLabel      "Hochzeit"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.9 a skos:Concept ;          # Niederkunft
-    skos:inScheme       :scheme ;
+wta:a1.9 a skos:Concept ;          # Niederkunft
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.9" ;
     skos:prefLabel      "Niederkunft"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.10 a skos:Concept ;         # Tod
-    skos:inScheme       :scheme ;
+wta:a1.10 a skos:Concept ;         # Tod
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.10" ;
     skos:prefLabel      "Tod"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.11 a skos:Concept ;         # Sich aufhalten/Betreten
-    skos:inScheme       :scheme ;
+wta:a1.11 a skos:Concept ;         # Sich aufhalten/Betreten
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.11" ;
     skos:altLabel       "Betreten"@de ;
     skos:prefLabel      "Aufenthalt"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
 
-:a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
-    skos:inScheme       :scheme ;
+wta:a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
+    skos:inScheme       wta:scheme ;
     skos:notation       "a1.12" ;
     skos:prefLabel      "Mitbringen oder Wegnehmen"@de ;
-    skos:broader        :a1 .
+    skos:broader        wta:a1 .
