@@ -34,7 +34,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_role/r2.2",
       "prefLabel": {
-        "de": "Erwachsene Arbeiterin"
+        "de": "Erwachsene Arbeiterin",
+        "en": "Adult female worker"
       }
     },
     {

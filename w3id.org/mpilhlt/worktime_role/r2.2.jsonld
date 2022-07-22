@@ -4,7 +4,8 @@
   "followers": "https://test.skohub.io/followers?subject=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_role%2Fr2.2",
   "inbox": "https://test.skohub.io/inbox?target=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_role%2Fr2.2",
   "prefLabel": {
-    "de": "Erwachsene Arbeiterin"
+    "de": "Erwachsene Arbeiterin",
+    "en": "Adult female worker"
   },
   "notation": [
     "r2.2"
