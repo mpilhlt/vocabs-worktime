@@ -76,7 +76,8 @@ wtr:r2.1 a skos:Concept ;          # Erwachsener Arbeiter
 wtr:r2.2 a skos:Concept ;          # Erwachsene Arbeiterin
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.2" ;
-    skos:prefLabel      "Erwachsene Arbeiterin"@de ;
+    skos:prefLabel      "Erwachsene Arbeiterin"@de ,
+                        "Adult female worker"@en ;
     skos:broader        wtr:r2 .
 
 wtr:r2.3 a skos:Concept ;          # Angestellter/Angestellte
