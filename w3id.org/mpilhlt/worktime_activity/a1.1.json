@@ -18,7 +18,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten",
+      "en": "MPILHLT concepts of regulations of working time, activities"
     }
   },
   "@context": {

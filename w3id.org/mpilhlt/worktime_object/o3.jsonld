@@ -53,7 +53,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
+      "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
     }
   },
   "topConceptOf": {

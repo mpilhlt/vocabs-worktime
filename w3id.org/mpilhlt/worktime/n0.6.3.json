@@ -32,7 +32,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung",
+      "en": "MPILHLT concepts of regulations of working time"
     }
   },
   "@context": {

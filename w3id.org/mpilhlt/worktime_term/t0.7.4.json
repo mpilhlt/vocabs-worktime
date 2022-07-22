@@ -24,7 +24,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_term/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, Regelungsbegriffe"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, Regelungsbegriffe",
+      "en": "MPILHLT concepts of regulations of working time, regulation terms"
     }
   },
   "@context": {

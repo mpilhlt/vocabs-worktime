@@ -18,7 +18,8 @@
   "inScheme": {
     "id": "https://w3id.org/mpilhlt/worktime_meta/scheme",
     "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"
+      "de": "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben",
+      "en": "MPILHLT concepts of regulations of working time, reflexive and meta-aspects"
     }
   },
   "@context": {
