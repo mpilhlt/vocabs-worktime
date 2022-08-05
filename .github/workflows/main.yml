@@ -3,7 +3,6 @@ name: Build /public and deploy to gh-pages with docker container
 on:
   push:
     branches:
-      - master
       - main
       - gh-pages
   workflow_dispatch:
@@ -32,10 +31,9 @@ jobs:
 
       - run: mkdir data
 
-      - run: git clone https://github.com/mpilhlt/vocabs-worktime.git data/
+      - run: git clone https://github.com/mpilhlt/vocabs-worktime.git
 
       - name: make .env.production file
-
         run: echo "BASEURL=/vocabs-worktime" > .env.production
 
       - name: build public dir with docker image
