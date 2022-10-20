@@ -58,7 +58,23 @@ wtm:m5.2 a skos:Concept ;          # Rahmengesetzgebung
     skos:prefLabel      "Rahmengesetzgebung"@de ;
     skos:altLabel       "Rechtsgrundlage"@de ,
                         "Ermächtigungsnorm"@de ;
+    skos:narrower       wtm:5.2.1 , # gesetzlich
+                        wtm:5.2.2 ; # tariflich
     skos:broader        wtm:m5 .
+
+wtm:m5.2.1 a skos:Concept ;          # gesetzlich
+    skos:inScheme       wtm:scheme ;
+    skos:notation       "m5.2.1" ;
+    skos:prefLabel      "gesetzlicher Rahmen"@de ;
+    skos:altLabel       "öffentliche Rahmengesetzgebung"@de ;
+    skos:broader        wtm:m5.2 .
+
+wtm:m5.2.2 a skos:Concept ;          # tariflich
+    skos:inScheme       wtm:scheme ;
+    skos:notation       "m5.2.2" ;
+    skos:prefLabel      "tariflicher Rahmen"@de ;
+    skos:altLabel       "tarifliche Rahmengesetzgebung"@de ;
+    skos:broader        wtm:m5.2 .
 
 wtm:m5.3 a skos:Concept ;          # Streitbeilegung
     skos:inScheme       wtm:scheme ;
