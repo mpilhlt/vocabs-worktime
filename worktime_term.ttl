@@ -155,6 +155,17 @@ wtt:t0.5.1 a skos:Concept ;
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.5.1" ;
     skos:prefLabel      "Pause"@de ;
+    skos:altLabel       "Pausen"@de,
+                        "Mittag"@de,
+                        "Mittagspause"@de,
+                        "Mittagspausen"@de,
+                        "Vesperpause"@de,
+                        "Vesperpausen"@de,
+                        "Frühstück"@de,
+                        "Frühstückspause"@de,
+                        "Frühstückspausen"@de,
+                        "Arbeitspause"@de,
+                        "Arbeitspausen"@de;
     skos:broader        wtt:t0.5 .
 
 wtt:t0.5.2 a skos:Concept ;
@@ -215,6 +226,8 @@ wtt:t0.6.1 a skos:Concept ;
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.6.1" ;
     skos:prefLabel      "Kontrolleinrichtung"@de ;
+    skos:altLabel       "Kontrolleinrichtungen"@de ,
+                        "Kontrollsystem"@de ;
     skos:broader        wtt:t0.6 .
 
 wtt:t0.6.2 a skos:Concept ;
@@ -269,6 +282,23 @@ wtt:t0.7 a skos:Concept ;          # Punishment
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.7" ;
     skos:prefLabel      "Strafe"@de ;
+    skos:altLabel       "Ordnungsstrafe"@de ,
+                        "Ordnungsstrafen"@de ,
+                        "Strafen"@de ,
+                        "Strafbestimmungen"@de ,
+                        "Bestrafung"@de ,
+                        "bestraft"@de ,
+                        "Strafmaßes"@de ,
+                        "Strafmaß"@de ,
+                        "geahndet"@de ,
+                        "Rechenschaft"@de ,
+                        "Versetzung"@de ,
+                        "Uebertretungsfällen"@de ,
+                        "Verstößen"@de ,
+                        "Verstoß"@de ,
+                        "Verstöße"@de ,
+                        "Zuwiderhandlungen"@de ,
+                        "Zuwiderhandlung"@de ;
     skos:narrower       wtt:t0.7.1 ,   # Monetary fine
                         wtt:t0.7.2 ,   # Lock-out
                         wtt:t0.7.3 ,   # Adhortatory letter
@@ -280,6 +310,17 @@ wtt:t0.7.1 a skos:Concept ;
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.7.1" ;
     skos:prefLabel      "Geldstrafe"@de ;
+    skos:altLabel       "Geldstrafen"@de ,
+                        "Strafgeld"@de ,
+                        "Strafgelder"@de ,
+                        "Bußen"@de ,
+                        "Buße"@de ,
+                        "verlustig"@de ,
+                        "Verlust des Lohnes"@de ,
+                        "Lohnabzug"@de ,
+                        "Abzug"@de ,
+                        "Abzuge"@de ,
+                        "zu zahlen"@de ;
     skos:broader        wtt:t0.7 .
 
 wtt:t0.7.2 a skos:Concept ;
@@ -298,9 +339,11 @@ wtt:t0.7.3 a skos:Concept ;
 wtt:t0.7.4 a skos:Concept ;
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.7.4" ;
-    skos:altLabel       "Entlassung"@de ,
-                        "fristlose Kündigung"@de ;
     skos:prefLabel      "Kündigung"@de ;
+    skos:altLabel       "Entlassung"@de ,
+                        "fristlose Kündigung"@de ,
+                        "entlassen"@de ,
+                        "Arbeitsentlassung"@de ;
     skos:broader        wtt:t0.7 .
 
 wtt:t0.7.5 a skos:Concept ;
@@ -315,7 +358,7 @@ wtt:t0.7.5 a skos:Concept ;
 wtt:t0.8 a skos:Concept ;          # Incentive
     skos:inScheme       wtt:scheme ;
     skos:notation       "t0.8" ;
+    skos:prefLabel      "Anreiz"@de ;
     skos:altLabel       "Belohnung"@de ,
                         "Prämie"@de ;
-    skos:prefLabel      "Anreiz"@de ;
     skos:broader        wtt:t0 .

@@ -59,12 +59,36 @@ wta:a1.1 a skos:Concept ;          # Rauchen
     skos:inScheme       wta:scheme ;
     skos:notation       "a1.1" ;
     skos:prefLabel      "Rauchen"@de ;
+    skos:altLabel       "schmauchen"@de ,
+                        "Tabakrauchen"@de ,
+                        "Tabak-Rauchen"@de ,
+                        "Tabak rauchen"@de ,
+                        "Zigarettenrauchen"@de ,
+                        "Cigarrenrauchen"@de ,
+                        "Zigarrenrauchen"@de ,
+                        "Anstecken von Tabakspfeifen"@de ,
+                        "Anstecken von Pfeifen"@de ,
+                        "Anstecken von Zigarren"@de ,
+                        "Anstecken von Cigarren"@de ,
+                        "Anstecken von Zigaretten"@de ;
     skos:broader        wta:a1 .
 
 wta:a1.2 a skos:Concept ;          # Alkohol trinken
     skos:inScheme       wta:scheme ;
     skos:notation       "a1.2" ;
     skos:prefLabel      "Alkohol trinken"@de ;
+    skos:altLabel       "Trunkenheit"@de ,
+                        "trinken"@de ,
+                        "betrinken"@de ,
+                        "betrunken"@de ,
+                        "angetrunken"@de ,
+                        "Sichbetrinken"@de ,
+                        "Genuss geistiger Getränke"@de ,
+                        "Genuß geistiger Getränke"@de ,
+                        "Genuss von Branntwein"@de ,
+                        "Genuß von Branntwein"@de ,
+                        "Branntweintrinken"@de ,
+                        "Biertrinken"@de ;
     skos:broader        wta:a1 .
 
 wta:a1.3 a skos:Concept ;          # Nahrungsaufnahme
@@ -126,4 +150,5 @@ wta:a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
     skos:inScheme       wta:scheme ;
     skos:notation       "a1.12" ;
     skos:prefLabel      "Mitbringen oder Wegnehmen"@de ;
+    skos:altLabel       "Einbringen"@de ;
     skos:broader        wta:a1 .

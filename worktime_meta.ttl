@@ -52,11 +52,12 @@ wtm:m5.1 a skos:Concept ;          # Geltungszeitregel
     skos:prefLabel      "Geltungszeitregel"@de ;
     skos:broader        wtm:m5 .
 
-wtm:m5.2 a skos:Concept ;          # Ermächtigungsnorm
+wtm:m5.2 a skos:Concept ;          # Rahmengesetzgebung
     skos:inScheme       wtm:scheme ;
     skos:notation       "m5.2" ;
-    skos:altLabel       "Rechtsgrundlage"@de ;
-    skos:prefLabel      "Ermächtigungsnorm"@de ;
+    skos:prefLabel      "Rahmengesetzgebung"@de ;
+    skos:altLabel       "Rechtsgrundlage"@de ,
+                        "Ermächtigungsnorm"@de ;
     skos:broader        wtm:m5 .
 
 wtm:m5.3 a skos:Concept ;          # Streitbeilegung

@@ -68,7 +68,7 @@ wtp:p4.3 a skos:Concept ;          # Erlaubnis
 wtp:p4.4 a skos:Concept ;          # Derogation
     skos:inScheme       wtp:scheme ;
     skos:notation       "p4.4" ;
-    skos:altLabel       "Ausnahme"@de ;
     skos:prefLabel      "Derogation"@de;
+    skos:altLabel       "Ausnahme"@de ;
     skos:broader        wtp:p4 .
 

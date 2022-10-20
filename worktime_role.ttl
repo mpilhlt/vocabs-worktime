@@ -71,6 +71,10 @@ wtr:r2.1 a skos:Concept ;          # Erwachsener Arbeiter
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.1" ;
     skos:prefLabel      "Erwachsener Arbeiter"@de ;
+    skos:altLabel       "Arbeiter"@de ,
+                        "gewerbliche Arbeiter"@de ,
+                        "gewerblichen Arbeitern"@de ,
+                        "Arbeiterpersonal"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.2 a skos:Concept ;          # Erwachsene Arbeiterin
@@ -78,7 +82,18 @@ wtr:r2.2 a skos:Concept ;          # Erwachsene Arbeiterin
     skos:notation       "r2.2" ;
     skos:prefLabel      "Erwachsene Arbeiterin"@de ,
                         "Adult female worker"@en ;
+    skos:altLabel       "Arbeiterinnen"@de ,
+                        "erwachsene Arbeiterinnen"@de ,
+                        "weiblichen Geschlechtes"@de ,
+                        "Arbeiterinnen von mehr als sechzehn Jahren"@de ;
+    skos:narrower       wtr:r2.2.1 ;
     skos:broader        wtr:r2 .
+
+wtr:r2.2.1 a skos:Concept ;          # Wöchnerin
+    skos:inScheme       wtr:scheme ;
+    skos:notation       "r2.2.1" ;
+    skos:prefLabel      "Wöchnerin"@de ;
+    skos:broader        wtr:r2.2 .
 
 wtr:r2.3 a skos:Concept ;          # Angestellter/Angestellte
     skos:inScheme       wtr:scheme ;
@@ -90,24 +105,44 @@ wtr:r2.4 a skos:Concept ;          # Vorgesetzer
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.4" ;
     skos:prefLabel      "Vorgesetzer"@de ;
+    skos:altLabel       "Vorgesetzter"@de ,
+                        "Betriebsvorgesetzter"@de ,
+                        "Vorsteher"@de ,
+                        "Abteilungsvorsteher"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.5 a skos:Concept ;          # Meister
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.5" ;
     skos:prefLabel      "Meister"@de ;
+    skos:altLabel       "Werkmeister"@de ,
+                        "Walzmeister"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.6 a skos:Concept ;          # Jugendliche/r Arbeiter/in
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.6" ;
-    skos:prefLabel      "Jugendliche/r Arbeiter/in"@de ;
-    skos:broader        wtr:r2 .
-
-wtr:r2.7 a skos:Concept ;          # Wöchnerin
-    skos:inScheme       wtr:scheme ;
-    skos:notation       "r2.7" ;
-    skos:prefLabel      "Wöchnerin"@de ;
+    skos:prefLabel      "Beschäftigte unter 21 Jahren"@de ;
+    skos:altLabel       "Jugendliche"@de ,
+                        "Jugendlichen"@de ,
+                        "jugendlicher Arbeiter"@de ,
+                        "jugendliche Arbeiter"@de ,
+                        "jugendlichen Arbeiter"@de ,
+                        "Unmündige"@de ,
+                        "Lehrling"@de ,
+                        "Lehrlinge"@de ,
+                        "Lehrburschen"@de ,
+                        "Arbeiter, die zum Besuch der Fortbildungsschule verpflichtet sind"@de ,
+                        "Burschen"@de ,
+                        "bis zum vollendeten 21. Lebensjahre"@de ,
+                        "Kinder unter 14 Jahren"@de ,
+                        "Minderjährige"@de ,
+                        "Minderjährigen"@de ,
+                        "minderjährige Arbeiter"@de ,
+                        "Nachwuchses"@de ,
+                        "Jungarbeiter"@de ,
+                        "jugendlichen Arbeiter unter 16 Jahren"@de ,
+                        "im Alter bis zu sechzehn Jahren"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.8 a skos:Concept ;          # Portier
@@ -121,7 +156,18 @@ wtr:r2.8 a skos:Concept ;          # Portier
 wtr:r2.9 a skos:Concept ;          # Betriebsführer
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.9" ;
-    skos:prefLabel      "Betriebsführer"@de ;
+    skos:prefLabel      "Fabrikleitung"@de ;
+    skos:altLabel       "Werkführer"@de ,
+                        "Werksführer"@de ,
+                        "Werksleiter"@de ,
+                        "Werkleiter"@de ,
+                        "Betriebsleiter"@de ,
+                        "Leitung"@de ,
+                        "Leiter der Fabrik"@de ,
+                        "Betriebsführer"@de ,
+                        "Geschäftsleitung"@de ,
+                        "Director"@de ,
+                        "Direktor"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.10 a skos:Concept ;         # betriebsfremde Person
@@ -154,9 +200,17 @@ wtr:r2.10.3 a skos:Concept ;
 wtr:r2.11 a skos:Concept ;         # Interessenvertreter
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.11" ;
-    skos:altLabel       "Arbeiterrat"@de ,
-                        "Vertrauensrat"@de ;
     skos:prefLabel      "Interessenvertreter"@de ;
+    skos:altLabel       "Arbeiterrat"@de ,
+                        "Vertrauensrat"@de ,
+                        "Arbeiterausschuss"@de ,
+                        "Arbeiter-Ausschuss"@de ,
+                        "Arbeiterräte"@de ,
+                        "Betriebsrat"@de ,
+                        "Betriebsräte"@de ,
+                        "Arbeiter-Rat"@de ,
+                        "Arbeiter-Vertretung"@de ,
+                        "Arbeitervertretung"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.12 a skos:Concept ;         # Fabrik-/Unternehmensbesitzer
@@ -189,6 +243,10 @@ wtr:r2.16 a skos:Concept ;         # Beamter
     skos:inScheme       wtr:scheme ;
     skos:notation       "r2.16" ;
     skos:prefLabel      "Beamter"@de ;
+    skos:altLabel       "Aufsichtsbeamter"@de ,
+                        "Beamter"@de ,
+                        "Werkbeamter"@de ,
+                        "Betriebsbeamter"@de ;
     skos:broader        wtr:r2 .
 
 wtr:r2.17 a skos:Concept ;         # Techniker

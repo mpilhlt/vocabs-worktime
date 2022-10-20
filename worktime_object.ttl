@@ -63,12 +63,21 @@ wto:o3.1.1 a skos:Concept ;          # Fabrikuhr
     skos:notation       "o3.1.1" ;
     skos:altLabel       "Uhr"@de ;
     skos:prefLabel      "Fabrikuhr"@de ;
+    skos:altLabel       "Fabriksuhr"@de ,
+                        "Fabriks-Uhr"@de ,
+                        "Betriebsuhr"@de ,
+                        "Werksuhr"@de ,
+                        "Werkuhr"@de ;
     skos:broader        wto:o3.1 .
 
 wto:o3.1.2 a skos:Concept ;          # Stechuhr
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.1.2" ;
     skos:prefLabel      "Stechuhr"@de ;
+    skos:altLabel       "Kontrolluhr"@de ,
+                        "Stempeln"@de ,
+                        "stechen"@de ,
+                        "Abstempelung"@de ;
     skos:broader        wto:o3.1 .
 
 wto:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
@@ -76,8 +85,13 @@ wto:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
     skos:notation       "o3.1.3" ;
     skos:altLabel       "Sirene"@de ,
                         "Pfeife"@de,
-                        "Glocke"@de ;
-    skos:prefLabel      "Akustisches Signal"@de ;
+                        "Glocke"@de ,
+                        "Läuten"@de ,
+                        "Zeichen"@de ,
+                        "Fabriksignal"@de ,
+                        "akustisches Signal"@de ,
+                        "Fabrikpfeife"@de ;
+    skos:prefLabel      "Signal"@de ;
     skos:broader        wto:o3.1 .
 
 wto:o3.2 a skos:Concept ;            # Schein/Marke
@@ -88,6 +102,15 @@ wto:o3.2 a skos:Concept ;            # Schein/Marke
                         "Passierschein"@de ,
                         "Karte"@de ,
                         "Chip"@de ,
+                        "Passirschein"@de ,
+                        "Erlaubnißkarte"@de ,
+                        "Erlaubniskarte"@de ,
+                        "Erlaubnisschein"@de ,
+                        "Schriftliche Erlaubnis"@de ,
+                        "Arbeitszeitkarte"@de ,
+                        "Durchlaßschein"@de ,
+                        "Durchlasschein"@de ,
+                        "Durchlassschein"@de ,
                         "Token"@de ;
     skos:prefLabel      "Schein/Marke"@de ;
     skos:broader        wto:o3 .
@@ -118,7 +141,11 @@ wto:o3.6 a skos:Concept ;          # Räumlichkeit
                         wto:o3.6.2 ,   # Compound
                         wto:o3.6.3 ,   # Boiler house
                         wto:o3.6.4 ,   # Workshop
-                        wto:o3.6.5 ;   # Yard
+                        wto:o3.6.5 ,   # Yard
+                        wto:o3.6.6 ,   # Storage
+                        wto:o3.6.7 ,   # Porter office
+                        wto:o3.6.8 ,   # Foundry
+                        wto:o3.6.9 ;   # Modelling shed
     skos:broader        wto:o3 .
 
 wto:o3.6.1 a skos:Concept ;        # Passage/border
@@ -133,8 +160,9 @@ wto:o3.6.1 a skos:Concept ;        # Passage/border
 wto:o3.6.1.1 a skos:Concept ;          # Weg
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.1.1" ;
-    skos:altLabel       "Fabrikweg"@de ;
     skos:prefLabel      "Weg"@de ;
+    skos:altLabel       "Fabrikweg"@de ,
+                        "Gang"@de ;
     skos:broader        wto:o3.6.1 .
 
 wto:o3.6.1.2 a skos:Concept ;          # Tor
@@ -154,8 +182,17 @@ wto:o3.6.1.3 a skos:Concept ;          # Grenze
 wto:o3.6.2 a skos:Concept ;          # Werksgelände
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.2" ;
-    skos:altLabel       "Gelände"@de ;
     skos:prefLabel      "Werksgelände"@de ;
+    skos:altLabel       "Gelände"@de ,
+                        "Etablissement"@de ,
+                        "Lokalität"@de ,
+                        "Localität"@de ,
+                        "Fabriklokalität"@de ,
+                        "Fabriklocalität"@de ,
+                        "Fabrikraum"@de ,
+                        "Fabrikräumlichkeiten"@de ,
+                        "Fabrikterrain"@de ,
+                        "Fabrikgrundstück"@de ;
     skos:broader        wto:o3.6 .
 
 wto:o3.6.3 a skos:Concept ;          # Kesselhaus
@@ -168,11 +205,44 @@ wto:o3.6.4 a skos:Concept ;          # Werkstatt
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.4" ;
     skos:prefLabel      "Werkstatt"@de ;
+    skos:altLabel       "Holzbearbeitungswerkstatt"@de ;
     skos:broader        wto:o3.6 .
 
 wto:o3.6.5 a skos:Concept ;          # Hof
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.5" ;
     skos:prefLabel      "Hof"@de ;
+    skos:altLabel       "Fabrikhof"@de ;
     skos:broader        wto:o3.6 .
 
+wto:o3.6.6 a skos:Concept ;          # Lager/Magazin
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.6.6" ;
+    skos:prefLabel      "Lager/Magazin"@de ;
+    skos:altLabel       "Magazin"@de ,
+                        "Lager"@de ,
+                        "Holzlagerplatz"@de ;
+    skos:broader        wto:o3.6 .
+
+wto:o3.6.7 a skos:Concept ;          # Pförtnerstube
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.6.7" ;
+    skos:prefLabel      "Pförtnerstube"@de ;
+    skos:altLabel       "Pförtnerzimmer"@de ,
+                        "Portier-Hause"@de ,
+                        "Portier-Haus"@de ;
+    skos:broader        wto:o3.6 .
+
+wto:o3.6.8 a skos:Concept ;          # Gießerei
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.6.8" ;
+    skos:prefLabel      "Gießerei"@de ;
+    skos:altLabel       "Gießereibetrieb"@de ;
+    skos:broader        wto:o3.6 .
+
+wto:o3.6.9 a skos:Concept ;          # Modellraum
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.6.9" ;
+    skos:prefLabel      "Modellraum"@de ;
+    skos:altLabel       "Modellschuppen"@de ;
+    skos:broader        wto:o3.6 .
