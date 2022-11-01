@@ -52,7 +52,6 @@ wtr:r2 a skos:Concept ;        # Social Role/Function
                         wtr:r2.4 , # Supervisor
                         wtr:r2.5 , # Master
                         wtr:r2.6 , # Juvenile worker
-                        wtr:r2.7 , # Woman who has recently given birth
                         wtr:r2.8 , # Doorkeeper
                         wtr:r2.9 , # Works manager
                         wtr:r2.10 , # external persons

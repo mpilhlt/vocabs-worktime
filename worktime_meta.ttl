@@ -58,8 +58,8 @@ wtm:m5.2 a skos:Concept ;          # Rahmengesetzgebung
     skos:prefLabel      "Rahmengesetzgebung"@de ;
     skos:altLabel       "Rechtsgrundlage"@de ,
                         "Ermächtigungsnorm"@de ;
-    skos:narrower       wtm:5.2.1 , # gesetzlich
-                        wtm:5.2.2 ; # tariflich
+    skos:narrower       wtm:m5.2.1 , # gesetzlich
+                        wtm:m5.2.2 ; # tariflich
     skos:broader        wtm:m5 .
 
 wtm:m5.2.1 a skos:Concept ;          # gesetzlich
