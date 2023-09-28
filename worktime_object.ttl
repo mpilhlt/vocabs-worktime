@@ -16,14 +16,15 @@ wto:scheme a skos:ConceptScheme ;
                         "MPILHLT concepts of regulations of working time, physical objects and spaces"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
-    dct:modified        "2020-06-07"^^xsd:date ;
+    dct:modified        "2023-09-28"^^xsd:date ;
     dct:publisher       <http://lobid.org/gnd/1231401982> ;
     dct:source          <https://raw.githubusercontent.com/mpilhlt/vocabs-worktime/main/worktime_object.ttl> ;
     dct:creator         <https://orcid.org/0000-0003-1835-1653> ;
     dct:contributor     "Collin, Peter" ,
                         "Ebbertz, Matthias" ,
-                        "Spendrin, Benjamin",
-                        "Vesper, Tim-Niklas",
+                        "Solonets, Polina" ,
+                        "Spendrin, Benjamin" ,
+                        "Vesper, Tim-Niklas" ,
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
