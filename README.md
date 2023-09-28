@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/R_kgDOGw9n-Q.svg)](https://zenodo.org/badge/latestdoi/R_kgDOGw9n-Q)
+[![DOI](https://zenodo.org/badge/453994489.svg)](https://zenodo.org/badge/latestdoi/453994489)
 
 # MPILHLT Concepts of Work Time Regulations
 
