@@ -32,7 +32,7 @@ wtr:scheme a skos:ConceptScheme ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtr" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_role/> ;
-    owl:versionInfo     "0.0.2" ;
+    owl:versionInfo     "0.0.3" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_role/1.0.0> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wtr:r2 . # Role/function

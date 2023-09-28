@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/R_kgDOGw9n-Q.svg)](https://zenodo.org/badge/latestdoi/R_kgDOGw9n-Q)
+
 # MPILHLT Concepts of Work Time Regulations
 
 This repository contains a systematic taxonomy used to describe different aspects of non-state working regulations such as contracts and company regulations. As the decision whether to maintain the different aspects in separate taxonomy schemes or to merge them into one big (heterogeneous) scheme is still pending, the repository contains both a combined file (`work_time_regulation.ttl`) and a series of separate skos files (for actions, physical objects and spaces, prescriptive aspects, reflexive and meta-aspects, regulation terms and social roles).

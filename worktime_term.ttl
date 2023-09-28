@@ -32,7 +32,7 @@ wtt:scheme a skos:ConceptScheme ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtt" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_term/> ;
-    owl:versionInfo     "0.0.2" ;
+    owl:versionInfo     "0.0.3" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime_term/1.0.0> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wtt:t0 . # Regulatory Concept
