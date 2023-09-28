@@ -28,7 +28,7 @@ wtp:scheme a skos:ConceptScheme ;
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 1.0.0. URL: <https://w3id.org/mpilhlt/worktime_prescription/1.0.0>"@de ;
+    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 0.0.3. URL: <https://w3id.org/mpilhlt/worktime_prescription/1.0.0>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtp" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_prescription/> ;
