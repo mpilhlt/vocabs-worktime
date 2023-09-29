@@ -1,14 +1,13 @@
 {
   "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.1.1",
   "type": "Concept",
-  "followers": "https://test.skohub.io/followers?subject=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_object%2Fo3.6.1.1",
-  "inbox": "https://test.skohub.io/inbox?target=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_object%2Fo3.6.1.1",
   "prefLabel": {
     "de": "Weg"
   },
   "altLabel": {
     "de": [
-      "Fabrikweg"
+      "Fabrikweg",
+      "Gang"
     ]
   },
   "notation": [
@@ -20,13 +19,20 @@
       "de": "Passage/Grenze"
     }
   },
-  "inScheme": {
-    "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
-    "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-      "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+  "inScheme": [
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
+      "title": {
+        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+      }
     }
-  },
+  ],
+  "inSchemeAll": [
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/scheme"
+    }
+  ],
   "@context": {
     "@version": 1.1,
     "id": "@id",
@@ -36,7 +42,6 @@
     "dct": "http://purl.org/dc/terms/",
     "schema": "http://schema.org/",
     "vann": "http://purl.org/vocab/vann/",
-    "as": "https://www.w3.org/ns/activitystreams#",
     "ldp": "http://www.w3.org/ns/ldp#",
     "title": {
       "@id": "dct:title",
@@ -68,6 +73,12 @@
       "@container": "@language"
     },
     "altLabel": {
+      "@container": [
+        "@language",
+        "@set"
+      ]
+    },
+    "hiddenLabel": {
       "@container": [
         "@language",
         "@set"
@@ -115,9 +126,13 @@
     "exactMatch": {
       "@container": "@set"
     },
-    "followers": "as:followers",
-    "inbox": "ldp:inbox",
     "hasTopConcept": {
+      "@container": "@set"
+    },
+    "inScheme": {
+      "@container": "@set"
+    },
+    "topConceptOf": {
       "@container": "@set"
     }
   }

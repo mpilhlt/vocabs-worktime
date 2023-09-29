@@ -1,10 +1,24 @@
 {
   "id": "https://w3id.org/mpilhlt/worktime_activity/a1.2",
   "type": "Concept",
-  "followers": "https://test.skohub.io/followers?subject=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_activity%2Fa1.2",
-  "inbox": "https://test.skohub.io/inbox?target=vocabs-worktime%2Fw3id.org%2Fmpilhlt%2Fworktime_activity%2Fa1.2",
   "prefLabel": {
     "de": "Alkohol trinken"
+  },
+  "altLabel": {
+    "de": [
+      "Trunkenheit",
+      "trinken",
+      "betrinken",
+      "betrunken",
+      "angetrunken",
+      "Sichbetrinken",
+      "Genuss geistiger Getränke",
+      "Genuß geistiger Getränke",
+      "Genuss von Branntwein",
+      "Genuß von Branntwein",
+      "Branntweintrinken",
+      "Biertrinken"
+    ]
   },
   "notation": [
     "a1.2"
@@ -15,13 +29,20 @@
       "de": "Tätigkeit"
     }
   },
-  "inScheme": {
-    "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
-    "title": {
-      "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten",
-      "en": "MPILHLT concepts of regulations of working time, activities"
+  "inScheme": [
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
+      "title": {
+        "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten",
+        "en": "MPILHLT concepts of regulations of working time, activities"
+      }
     }
-  },
+  ],
+  "inSchemeAll": [
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_activity/scheme"
+    }
+  ],
   "@context": {
     "@version": 1.1,
     "id": "@id",
@@ -31,7 +52,6 @@
     "dct": "http://purl.org/dc/terms/",
     "schema": "http://schema.org/",
     "vann": "http://purl.org/vocab/vann/",
-    "as": "https://www.w3.org/ns/activitystreams#",
     "ldp": "http://www.w3.org/ns/ldp#",
     "title": {
       "@id": "dct:title",
@@ -63,6 +83,12 @@
       "@container": "@language"
     },
     "altLabel": {
+      "@container": [
+        "@language",
+        "@set"
+      ]
+    },
+    "hiddenLabel": {
       "@container": [
         "@language",
         "@set"
@@ -110,9 +136,13 @@
     "exactMatch": {
       "@container": "@set"
     },
-    "followers": "as:followers",
-    "inbox": "ldp:inbox",
     "hasTopConcept": {
+      "@container": "@set"
+    },
+    "inScheme": {
+      "@container": "@set"
+    },
+    "topConceptOf": {
       "@container": "@set"
     }
   }
