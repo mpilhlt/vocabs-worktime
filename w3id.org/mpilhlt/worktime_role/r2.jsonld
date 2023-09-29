@@ -24,16 +24,9 @@
   ],
   "narrower": [
     {
-      "id": "https://w3id.org/mpilhlt/worktime_role/r2.1",
+      "id": "https://w3id.org/mpilhlt/worktime_role/r2.0",
       "prefLabel": {
-        "de": "Erwachsener Arbeiter"
-      }
-    },
-    {
-      "id": "https://w3id.org/mpilhlt/worktime_role/r2.2",
-      "prefLabel": {
-        "de": "Erwachsene Arbeiterin",
-        "en": "Adult female worker"
+        "de": "Arbeiter"
       }
     },
     {
@@ -52,12 +45,6 @@
       "id": "https://w3id.org/mpilhlt/worktime_role/r2.5",
       "prefLabel": {
         "de": "Meister"
-      }
-    },
-    {
-      "id": "https://w3id.org/mpilhlt/worktime_role/r2.6",
-      "prefLabel": {
-        "de": "Beschäftigte unter 21 Jahren"
       }
     },
     {
@@ -144,8 +131,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_role/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen",
-        "en": "MPILHLT concepts of regulations of working time, social roles"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, soziale Rollen",
+        "en": "MPILHLT concepts of regulations of work, social roles"
       }
     }
   ],
@@ -158,8 +145,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_role/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, soziale Rollen",
-        "en": "MPILHLT concepts of regulations of working time, social roles"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, soziale Rollen",
+        "en": "MPILHLT concepts of regulations of work, social roles"
       }
     }
   ],

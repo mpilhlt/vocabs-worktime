@@ -14,15 +14,7 @@
       "bestraft",
       "Strafmaßes",
       "Strafmaß",
-      "geahndet",
-      "Rechenschaft",
-      "Versetzung",
-      "Uebertretungsfällen",
-      "Verstößen",
-      "Verstoß",
-      "Verstöße",
-      "Zuwiderhandlungen",
-      "Zuwiderhandlung"
+      "geahndet"
     ]
   },
   "notation": [
@@ -50,13 +42,13 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_term/t0.7.4",
       "prefLabel": {
-        "de": "Kündigung"
+        "de": "Kündigung (Strafe)"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_term/t0.7.5",
       "prefLabel": {
-        "de": "Lohnsystem"
+        "de": "Lohnkürzung"
       }
     }
   ],
@@ -70,8 +62,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_term/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, Regelungsbegriffe",
-        "en": "MPILHLT concepts of regulations of working time, regulation terms"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, Regelungsbegriffe",
+        "en": "MPILHLT concepts of regulations of work, regulation terms"
       }
     }
   ],

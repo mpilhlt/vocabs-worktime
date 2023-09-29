@@ -2,7 +2,12 @@
   "id": "https://w3id.org/mpilhlt/worktime_term/t0.6.3.1",
   "type": "Concept",
   "prefLabel": {
-    "de": "Frist"
+    "de": "Frist (Meldung)"
+  },
+  "altLabel": {
+    "de": [
+      "Frist"
+    ]
   },
   "notation": [
     "t0.6.3.1"
@@ -10,15 +15,15 @@
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_term/t0.6.3",
     "prefLabel": {
-      "de": "Meldung"
+      "de": "Meldung (Kontrolle)"
     }
   },
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_term/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, Regelungsbegriffe",
-        "en": "MPILHLT concepts of regulations of working time, regulation terms"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, Regelungsbegriffe",
+        "en": "MPILHLT concepts of regulations of work, regulation terms"
       }
     }
   ],

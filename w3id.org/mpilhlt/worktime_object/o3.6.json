@@ -11,7 +11,7 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.1",
       "prefLabel": {
-        "de": "Passage/Grenze"
+        "de": "Passage, Grenze"
       }
     },
     {
@@ -41,19 +41,21 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.6",
       "prefLabel": {
-        "de": "Lager/Magazin"
+        "de": "Lager, Magazin"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.7",
       "prefLabel": {
-        "de": "Pförtnerstube"
+        "de": "Pförtnerstube",
+        "en": "Porter's lodge"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.8",
       "prefLabel": {
-        "de": "Gießerei"
+        "de": "Gießerei",
+        "en": "Foundry"
       }
     },
     {
@@ -61,20 +63,28 @@
       "prefLabel": {
         "de": "Modellraum"
       }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.10",
+      "prefLabel": {
+        "de": "Zahlstube",
+        "en": "Cashier's office"
+      }
     }
   ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_object/o3",
     "prefLabel": {
-      "de": "Objekt"
+      "de": "Objekt",
+      "en": "Object"
     }
   },
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of work, physical objects and spaces"
       }
     }
   ],

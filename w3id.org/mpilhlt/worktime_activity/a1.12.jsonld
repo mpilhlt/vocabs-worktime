@@ -12,18 +12,28 @@
   "notation": [
     "a1.12"
   ],
+  "narrower": [
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_activity/a1.12.1",
+      "prefLabel": {
+        "de": "Verlieren",
+        "en": "losing"
+      }
+    }
+  ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_activity/a1",
     "prefLabel": {
-      "de": "Tätigkeit"
+      "de": "Tätigkeit",
+      "en": "Activity"
     }
   },
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten",
-        "en": "MPILHLT concepts of regulations of working time, activities"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, Tätigkeiten",
+        "en": "MPILHLT concepts of regulations of work, activities"
       }
     }
   ],

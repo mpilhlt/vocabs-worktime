@@ -2,7 +2,8 @@
   "id": "https://w3id.org/mpilhlt/worktime_object/o3.1",
   "type": "Concept",
   "prefLabel": {
-    "de": "Signaleinrichtung"
+    "de": "Signaleinrichtung",
+    "en": "Signal device"
   },
   "notation": [
     "o3.1"
@@ -11,34 +12,38 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.1.1",
       "prefLabel": {
-        "de": "Fabrikuhr"
+        "de": "Fabrikuhr",
+        "en": "Factory clock"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.1.2",
       "prefLabel": {
-        "de": "Stechuhr"
+        "de": "Stechuhr",
+        "en": "Punch clock"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.1.3",
       "prefLabel": {
-        "de": "Signal"
+        "de": "Signal",
+        "en": "Signal"
       }
     }
   ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_object/o3",
     "prefLabel": {
-      "de": "Objekt"
+      "de": "Objekt",
+      "en": "Object"
     }
   },
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of work, physical objects and spaces"
       }
     }
   ],

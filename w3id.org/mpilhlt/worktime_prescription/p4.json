@@ -34,14 +34,28 @@
       "prefLabel": {
         "de": "Derogation"
       }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_prescription/p4.5",
+      "prefLabel": {
+        "de": "Verstoß",
+        "en": "Violation"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_prescription/p4.6",
+      "prefLabel": {
+        "de": "Erfüllung",
+        "en": "Compliance"
+      }
     }
   ],
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_prescription/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, präskriptive Aspekte",
-        "en": "MPILHLT concepts of regulations of working time, prescriptive aspects"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, präskriptive Aspekte",
+        "en": "MPILHLT concepts of regulations of work, prescriptive aspects"
       }
     }
   ],
@@ -54,8 +68,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_prescription/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, präskriptive Aspekte",
-        "en": "MPILHLT concepts of regulations of working time, prescriptive aspects"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, präskriptive Aspekte",
+        "en": "MPILHLT concepts of regulations of work, prescriptive aspects"
       }
     }
   ],

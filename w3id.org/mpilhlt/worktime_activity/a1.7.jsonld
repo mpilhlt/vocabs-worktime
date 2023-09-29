@@ -2,7 +2,13 @@
   "id": "https://w3id.org/mpilhlt/worktime_activity/a1.7",
   "type": "Concept",
   "prefLabel": {
-    "de": "Maschine säubern"
+    "de": "säubern",
+    "en": "cleaning"
+  },
+  "altLabel": {
+    "de": [
+      "reinigen"
+    ]
   },
   "notation": [
     "a1.7"
@@ -10,15 +16,16 @@
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_activity/a1",
     "prefLabel": {
-      "de": "Tätigkeit"
+      "de": "Tätigkeit",
+      "en": "Activity"
     }
   },
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten",
-        "en": "MPILHLT concepts of regulations of working time, activities"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, Tätigkeiten",
+        "en": "MPILHLT concepts of regulations of work, activities"
       }
     }
   ],

@@ -2,7 +2,7 @@
   "id": "https://w3id.org/mpilhlt/worktime_object/o3.6.1",
   "type": "Concept",
   "prefLabel": {
-    "de": "Passage/Grenze"
+    "de": "Passage, Grenze"
   },
   "notation": [
     "o3.6.1"
@@ -37,8 +37,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of work, physical objects and spaces"
       }
     }
   ],

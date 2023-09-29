@@ -2,7 +2,8 @@
   "id": "https://w3id.org/mpilhlt/worktime_object/o3",
   "type": "Concept",
   "prefLabel": {
-    "de": "Objekt"
+    "de": "Objekt",
+    "en": "Object"
   },
   "scopeNote": {
     "de": "In normativen Regeln erwähntes physisches Objekt"
@@ -14,19 +15,21 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.1",
       "prefLabel": {
-        "de": "Signaleinrichtung"
+        "de": "Signaleinrichtung",
+        "en": "Signal device"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.2",
       "prefLabel": {
-        "de": "Schein/Marke"
+        "de": "Schein, Marke"
       }
     },
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/o3.3",
       "prefLabel": {
-        "de": "Maschine"
+        "de": "Maschine",
+        "en": "Machine"
       }
     },
     {
@@ -46,14 +49,49 @@
       "prefLabel": {
         "de": "Räumlichkeit"
       }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.7",
+      "prefLabel": {
+        "de": "Papiere",
+        "en": "Paperwork"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.8",
+      "prefLabel": {
+        "de": "Behälter",
+        "en": "Container"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.9",
+      "prefLabel": {
+        "de": "Fahrzeug",
+        "en": "Vehicle"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.10",
+      "prefLabel": {
+        "de": "Lohntüte",
+        "en": "Pay envelope"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_object/o3.11",
+      "prefLabel": {
+        "de": "Produkt",
+        "en": "Product"
+      }
     }
   ],
   "inScheme": [
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of work, physical objects and spaces"
       }
     }
   ],
@@ -66,8 +104,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_object/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume",
-        "en": "MPILHLT concepts of regulations of working time, physical objects and spaces"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume",
+        "en": "MPILHLT concepts of regulations of work, physical objects and spaces"
       }
     }
   ],
