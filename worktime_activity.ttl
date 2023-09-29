@@ -1,19 +1,19 @@
-@prefix wta: <https://w3id.org/mpilhlt/worktime_activity/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wta:  <https://w3id.org/mpilhlt/worktime_activity/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs:   <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 wta:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ,
-                        "MPILHLT concepts of regulations of working time, activities"@en ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, Tätigkeiten"@de ,
-                        "Concept scheme for regulations of working time, activities"@en ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, Tätigkeiten"@de ,
-                        "MPILHLT concepts of regulations of working time, activities"@en ;
+    dct:title           "MPILHLT Begriffe der Arbeitsregulierung, Tätigkeiten"@de ,
+                        "MPILHLT concepts of regulations of work, activities"@en ;
+    dct:description     "Begriffsschema für die Beschreibung von Tätigkeiten im Rahmen von Regulierungen von Arbeit"@de ,
+                        "Concept scheme for the description of activities in the context of regulations of work"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitsregulierung, Tätigkeiten"@de ,
+                        "MPILHLT concepts of regulations of work, activities"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2023-09-28"^^xsd:date ;
@@ -28,12 +28,12 @@ wta:scheme a skos:ConceptScheme ;
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 0.0.3. URL: <https://w3id.org/mpilhlt/worktime_activity/0.0.3/scheme>"@de ;
+    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Regulations of Work. SKOS Concept Scheme. Version 0.0.4. URL: <https://w3id.org/mpilhlt/worktime_activity/0.0.4/scheme>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wta" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_activity/> ;
-    owl:versionInfo     "0.0.3" ;
-    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_activity/0.0.3> ;
+    owl:versionInfo     "0.0.4" ;
+    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_activity/0.0.4> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wta:a1 . # Activity
 
@@ -41,7 +41,10 @@ wta:a1 a skos:Concept ;        # Activity
     skos:inScheme       wta:scheme ;
     skos:topConceptOf   wta:scheme ;
     skos:notation       "a1" ;
-    skos:prefLabel      "Tätigkeit"@de ;
+    skos:prefLabel      "Tätigkeit"@de ,
+                        "Activity"@en ;
+    skos:altLabel       "Verhalten"@de ,
+                        "Behaviour"@en ;
     skos:scopeNote      "Verhalten oder Tätigkeit, die Gegenstand normativer Regulierung der Arbeitszeit ist."@de ;
     skos:narrower       wta:a1.1 , # Smoking
                         wta:a1.2 , # Drinking alcohol
@@ -49,12 +52,14 @@ wta:a1 a skos:Concept ;        # Activity
                         wta:a1.4 , # Talking
                         wta:a1.5 , # Going to the toilet
                         wta:a1.6 , # Changing clothes
-                        wta:a1.7 , # Cleaning tools & machinery
+                        wta:a1.7 , # Cleaning
                         wta:a1.8 , # Wedding
                         wta:a1.9 , # Giving birth
                         wta:a1.10 , # Dying
                         wta:a1.11 , # Tarrying/Walking/Accessing
-                        wta:a1.12 .
+                        wta:a1.12 , # Bringing/Removing
+                        wta:a1.13 , # Selling
+                        wta:a1.14 . # Reporting
 
 wta:a1.1 a skos:Concept ;          # Rauchen
     skos:inScheme       wta:scheme ;
@@ -119,7 +124,9 @@ wta:a1.6 a skos:Concept ;          # Umkleiden
 wta:a1.7 a skos:Concept ;          # Maschine säubern
     skos:inScheme       wta:scheme ;
     skos:notation       "a1.7" ;
-    skos:prefLabel      "Maschine säubern"@de ;
+    skos:prefLabel      "säubern"@de ,
+                        "cleaning"@en ;
+    skos:altLabel       "reinigen"@de ;
     skos:broader        wta:a1 .
 
 wta:a1.8 a skos:Concept ;          # Hochzeit
@@ -152,4 +159,30 @@ wta:a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
     skos:notation       "a1.12" ;
     skos:prefLabel      "Mitbringen oder Wegnehmen"@de ;
     skos:altLabel       "Einbringen"@de ;
+    skos:broader        wta:a1 ;
+    skos:narrower       wta:a1.12.1 . # Losing
+
+wta:a1.12.1 a skos:Concept ;         # Verlieren
+    skos:inScheme       wta:scheme ;
+    skos:notation       "a1.12.1" ;
+    skos:prefLabel      "Verlieren"@de ,
+                        "losing"@en ;
+    skos:altLabel       "Verlust"@de ;
+    skos:broader        wta:a1.12 .
+
+wta:a1.13 a skos:Concept ;         # Verkauf
+    skos:inScheme       wta:scheme ;
+    skos:notation       "a1.13" ;
+    skos:prefLabel      "Verkaufen"@de ,
+                        "selling"@en ;
+    skos:altLabel       "Verkauf"@de ;
+    skos:broader        wta:a1 .
+
+wta:a1.14 a skos:Concept ;         # Melden
+    skos:inScheme       wta:scheme ;
+    skos:notation       "a1.14" ;
+    skos:prefLabel      "Melden (Tätigkeit)"@de ,
+                        "reporting"@en ;
+    skos:altLabel       "Melden"@de ,
+                        "Meldung"@de ;
     skos:broader        wta:a1 .

@@ -1,19 +1,19 @@
-@prefix wtp: <https://w3id.org/mpilhlt/worktime_prescription/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wtp:  <https://w3id.org/mpilhlt/worktime_prescription/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs:   <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 wtp:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, präskriptive Aspekte"@de,
-                        "MPILHLT concepts of regulations of working time, prescriptive aspects"@en ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, präskriptive Aspekte"@de,
-                        "Concept scheme for regulations of working time, prescriptive aspects"@en ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, präskriptive Aspekte"@de,
-                        "MPILHLT concepts of regulations of working time, prescriptive aspects"@en ;
+    dct:title           "MPILHLT Begriffe der Arbeitsregulierung, präskriptive Aspekte"@de,
+                        "MPILHLT concepts of regulations of work, prescriptive aspects"@en ;
+    dct:description     "Begriffsschema für die Beschreibung von präskriptiven Aspekten im Rahmen von Regulierungen von Arbeit"@de,
+                        "Concept scheme for the description of prescriptive aspects in the context of regulations of work"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitsregulierung, präskriptive Aspekte"@de,
+                        "MPILHLT concepts of regulations of work, prescriptive aspects"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2023-09-28"^^xsd:date ;
@@ -28,16 +28,16 @@ wtp:scheme a skos:ConceptScheme ;
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 0.0.3. URL: <https://w3id.org/mpilhlt/worktime_prescription/0.0.3/scheme>"@de ;
+    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Regulations of Work. SKOS Concept Scheme. Version 0.0.4. URL: <https://w3id.org/mpilhlt/worktime_prescription/0.0.4/scheme>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtp" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_prescription/> ;
-    owl:versionInfo     "0.0.3" ;
-    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_prescription/0.0.3> ;
+    owl:versionInfo     "0.0.4" ;
+    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_prescription/0.0.4> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wtp:p4 . # Normative Assessment
 
-wtp:p4 a skos:Concept ;        # Preskription
+wtp:p4 a skos:Concept ;          # Preskription
     skos:inScheme       wtp:scheme ;
     skos:topConceptOf   wtp:scheme ;
     skos:notation       "p4" ;
@@ -46,7 +46,9 @@ wtp:p4 a skos:Concept ;        # Preskription
     skos:narrower       wtp:p4.1 , # Obligation
                         wtp:p4.2 , # Prohibition
                         wtp:p4.3 , # Permission
-                        wtp:p4.4 . # Derogation
+                        wtp:p4.4 , # Derogation
+                        wtp:p4.5 , # Violation
+                        wtp:p4.6 . # Compliance
 
 wtp:p4.1 a skos:Concept ;          # Gebot
     skos:inScheme       wtp:scheme ;
@@ -73,3 +75,23 @@ wtp:p4.4 a skos:Concept ;          # Derogation
     skos:altLabel       "Ausnahme"@de ;
     skos:broader        wtp:p4 .
 
+wtp:p4.5 a skos:Concept ;          # Verstoß
+    skos:inScheme       wtp:scheme ;
+    skos:notation       "p4.5" ;
+    skos:prefLabel      "Verstoß"@de ,
+                        "Violation"@en ;
+    skos:altLabel       "Verstöße"@de ,
+                        "Zuwiderhandlung"@de ,
+                        "Zuwiderhandlungen"@de ,
+                        "Transgression"@en ,
+                        "Infringement"@en ;
+    skos:broader        wtp:p4 .
+
+wtp:p4.6 a skos:Concept ;          # Erfüllung
+    skos:inScheme       wtp:scheme ;
+    skos:notation       "p4.6" ;
+    skos:prefLabel      "Erfüllung"@de ,
+                        "Compliance"@en ;
+    skos:altLabel       "Befolgung"@de ,
+                        "Übereinstimmung"@de ;
+    skos:broader        wtp:p4 .

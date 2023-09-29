@@ -1,19 +1,19 @@
-@prefix wto: <https://w3id.org/mpilhlt/worktime_object/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wto:  <https://w3id.org/mpilhlt/worktime_object/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs:   <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 wto:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume"@de ,
-                        "MPILHLT concepts of regulations of working time, physical objects and spaces"@en ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, physische Objekte und Räume"@de ,
-                        "Concept scheme for regulations of working time, physical objects and spaces"@en ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, physische Objekte und Räume"@de ,
-                        "MPILHLT concepts of regulations of working time, physical objects and spaces"@en ;
+    dct:title           "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume"@de ,
+                        "MPILHLT concepts of regulations of work, physical objects and spaces"@en ;
+    dct:description     "Begriffsschema für die Beschreibung von physischen Objekten und Räumen im Rahmen von Regulierungen von Arbeit"@de ,
+                        "Concept scheme for the description of physical objects and spaces in the context of regulations of work"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitsregulierung, physische Objekte und Räume"@de ,
+                        "MPILHLT concepts of regulations of work, physical objects and spaces"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2023-09-28"^^xsd:date ;
@@ -28,32 +28,39 @@ wto:scheme a skos:ConceptScheme ;
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 0.0.3. URL: <https://w3id.org/mpilhlt/worktime_object/0.0.3/scheme>"@de ;
+    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Regulations of Work. SKOS Concept Scheme. Version 0.0.4. URL: <https://w3id.org/mpilhlt/worktime_object/0.0.4/scheme>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wto" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_object/> ;
-    owl:versionInfo     "0.0.3" ;
-    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_object/0.0.3> ;
+    owl:versionInfo     "0.0.4" ;
+    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_object/0.0.4> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wto:o3 . # Object
 
-wto:o3 a skos:Concept ;        # Object
+wto:o3 a skos:Concept ;          # Objekt
     skos:inScheme       wto:scheme ;
     skos:topConceptOf   wto:scheme ;
     skos:notation       "o3" ;
-    skos:prefLabel      "Objekt"@de ;
+    skos:prefLabel      "Objekt"@de ,
+                        "Object"@en ;
     skos:scopeNote      "In normativen Regeln erwähntes physisches Objekt"@de ;
     skos:narrower       wto:o3.1 , # Signal device
                         wto:o3.2 , # Token
                         wto:o3.3 , # Machine
                         wto:o3.4 , # Tool
                         wto:o3.5 , # Material
-                        wto:o3.6 . # Room/Space
+                        wto:o3.6 , # Room or Space
+                        wto:o3.7 , # Paperwork
+                        wto:o3.8 , # Container
+                        wto:o3.9 , # Vehicles
+                        wto:o3.10 , # Pay envelope
+                        wto:o3.11 . # Product
 
 wto:o3.1 a skos:Concept ;          # Signal device
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.1" ;
-    skos:prefLabel      "Signaleinrichtung"@de ;
+    skos:prefLabel      "Signaleinrichtung"@de ,
+                        "Signal device"@en ;
     skos:narrower       wto:o3.1.1 ,   # Factory clock
                         wto:o3.1.2 ,   # Check clock
                         wto:o3.1.3 ;   # Acoustic signal
@@ -62,9 +69,10 @@ wto:o3.1 a skos:Concept ;          # Signal device
 wto:o3.1.1 a skos:Concept ;          # Fabrikuhr
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.1.1" ;
-    skos:altLabel       "Uhr"@de ;
-    skos:prefLabel      "Fabrikuhr"@de ;
-    skos:altLabel       "Fabriksuhr"@de ,
+    skos:prefLabel      "Fabrikuhr"@de ,
+                        "Factory clock"@en ;
+    skos:altLabel       "Uhr"@de ,
+                        "Fabriksuhr"@de ,
                         "Fabriks-Uhr"@de ,
                         "Betriebsuhr"@de ,
                         "Werksuhr"@de ,
@@ -74,16 +82,19 @@ wto:o3.1.1 a skos:Concept ;          # Fabrikuhr
 wto:o3.1.2 a skos:Concept ;          # Stechuhr
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.1.2" ;
-    skos:prefLabel      "Stechuhr"@de ;
+    skos:prefLabel      "Stechuhr"@de ,
+                        "Punch clock"@en ;
     skos:altLabel       "Kontrolluhr"@de ,
                         "Stempeln"@de ,
                         "stechen"@de ,
                         "Abstempelung"@de ;
     skos:broader        wto:o3.1 .
 
-wto:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
+wto:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife, Glocke, Sirene
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.1.3" ;
+    skos:prefLabel      "Signal"@de ,
+                        "Signal"@en ;
     skos:altLabel       "Sirene"@de ,
                         "Pfeife"@de,
                         "Glocke"@de ,
@@ -92,12 +103,12 @@ wto:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
                         "Fabriksignal"@de ,
                         "akustisches Signal"@de ,
                         "Fabrikpfeife"@de ;
-    skos:prefLabel      "Signal"@de ;
     skos:broader        wto:o3.1 .
 
-wto:o3.2 a skos:Concept ;            # Schein/Marke
+wto:o3.2 a skos:Concept ;            # Schein, Marke
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.2" ;
+    skos:prefLabel      "Schein, Marke"@de ;
     skos:altLabel       "Schein"@de ,
                         "Marke"@de ,
                         "Passierschein"@de ,
@@ -113,13 +124,13 @@ wto:o3.2 a skos:Concept ;            # Schein/Marke
                         "Durchlasschein"@de ,
                         "Durchlassschein"@de ,
                         "Token"@de ;
-    skos:prefLabel      "Schein/Marke"@de ;
     skos:broader        wto:o3 .
 
 wto:o3.3 a skos:Concept ;          # Maschine
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.3" ;
-    skos:prefLabel      "Maschine"@de ;
+    skos:prefLabel      "Maschine"@de ,
+                        "Machine"@en ;
     skos:broader        wto:o3 .
 
 wto:o3.4 a skos:Concept ;          # Werkzeug
@@ -138,7 +149,7 @@ wto:o3.6 a skos:Concept ;          # Räumlichkeit
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6" ;
     skos:prefLabel      "Räumlichkeit"@de ;
-    skos:narrower       wto:o3.6.1 ,   # Passage/border
+    skos:narrower       wto:o3.6.1 ,   # Passage, border
                         wto:o3.6.2 ,   # Compound
                         wto:o3.6.3 ,   # Boiler house
                         wto:o3.6.4 ,   # Workshop
@@ -146,18 +157,19 @@ wto:o3.6 a skos:Concept ;          # Räumlichkeit
                         wto:o3.6.6 ,   # Storage
                         wto:o3.6.7 ,   # Porter office
                         wto:o3.6.8 ,   # Foundry
-                        wto:o3.6.9 ;   # Modelling shed
+                        wto:o3.6.9 ,   # Modelling shed
+                        wto:o3.6.10 ;  # Cashier's office
     skos:broader        wto:o3 .
 
-wto:o3.6.1 a skos:Concept ;        # Passage/border
+wto:o3.6.1 a skos:Concept ;          # Passage, border
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.1" ;
-    skos:prefLabel      "Passage/Grenze"@de ;
+    skos:prefLabel      "Passage, Grenze"@de ;
     skos:narrower       wto:o3.6.1.1 , # Weg
                         wto:o3.6.1.2 , # Tor
                         wto:o3.6.1.3 ; # Grenze
     skos:broader        wto:o3.6 .
-    
+
 wto:o3.6.1.1 a skos:Concept ;          # Weg
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.1.1" ;
@@ -216,10 +228,10 @@ wto:o3.6.5 a skos:Concept ;          # Hof
     skos:altLabel       "Fabrikhof"@de ;
     skos:broader        wto:o3.6 .
 
-wto:o3.6.6 a skos:Concept ;          # Lager/Magazin
+wto:o3.6.6 a skos:Concept ;          # Lager, Magazin
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.6" ;
-    skos:prefLabel      "Lager/Magazin"@de ;
+    skos:prefLabel      "Lager, Magazin"@de ;
     skos:altLabel       "Magazin"@de ,
                         "Lager"@de ,
                         "Holzlagerplatz"@de ;
@@ -228,7 +240,8 @@ wto:o3.6.6 a skos:Concept ;          # Lager/Magazin
 wto:o3.6.7 a skos:Concept ;          # Pförtnerstube
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.7" ;
-    skos:prefLabel      "Pförtnerstube"@de ;
+    skos:prefLabel      "Pförtnerstube"@de ,
+                        "Porter's lodge"@en ;
     skos:altLabel       "Pförtnerzimmer"@de ,
                         "Portier-Hause"@de ,
                         "Portier-Haus"@de ;
@@ -237,7 +250,8 @@ wto:o3.6.7 a skos:Concept ;          # Pförtnerstube
 wto:o3.6.8 a skos:Concept ;          # Gießerei
     skos:inScheme       wto:scheme ;
     skos:notation       "o3.6.8" ;
-    skos:prefLabel      "Gießerei"@de ;
+    skos:prefLabel      "Gießerei"@de ,
+                        "Foundry"@en ;
     skos:altLabel       "Gießereibetrieb"@de ;
     skos:broader        wto:o3.6 .
 
@@ -247,3 +261,116 @@ wto:o3.6.9 a skos:Concept ;          # Modellraum
     skos:prefLabel      "Modellraum"@de ;
     skos:altLabel       "Modellschuppen"@de ;
     skos:broader        wto:o3.6 .
+
+wto:o3.6.10 a skos:Concept ;         # Zahlstube
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.6.10" ;
+    skos:prefLabel      "Zahlstube"@de ,
+                        "Cashier's office"@en ;
+    skos:altLabel       "Zahllokal"@de ;
+    skos:broader        wto:o3.6 .
+
+wto:o3.7 a skos:Concept ;          # Papiere
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.7" ;
+    skos:prefLabel      "Papiere"@de ,
+                        "Paperwork"@en ;
+    skos:altLabel       "Dokumente"@de ,
+                        "Documents"@en ;
+    skos:narrower       wto:o3.7.1 ,   # Arbeitsbuch
+                        wto:o3.7.2 ,   # Ausweis
+                        wto:o3.7.3 ,   # Versicherungsdokument
+                        wto:o3.7.4 ;   # Zeugnis
+    skos:broader        wto:o3 .
+
+wto:o3.7.1 a skos:Concept ;          # Arbeitsbuch
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.7.1" ;
+    skos:prefLabel      "Arbeitsbuch"@de ;
+    skos:broader        wto:o3.7 .
+
+wto:o3.7.2 a skos:Concept ;          # Ausweis
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.7.2" ;
+    skos:prefLabel      "Ausweis"@de ;
+    skos:broader        wto:o3.7 .
+
+wto:o3.7.3 a skos:Concept ;          # Versicherungsdokument
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.7.3" ;
+    skos:prefLabel      "Versicherungsdokument"@de ;
+    skos:broader        wto:o3.7 .
+
+wto:o3.7.4 a skos:Concept ;          # Zeugnis
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.7.4" ;
+    skos:prefLabel      "Zeugnis"@de ;
+    skos:broader        wto:o3.7 .
+
+wto:o3.8 a skos:Concept ;          # Behälter
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.8" ;
+    skos:prefLabel      "Behälter"@de ,
+                        "Container"@en ;
+    skos:narrower       wto:o3.8.1 ,   # Kasten
+                        wto:o3.8.2 ;   # Schrank
+    skos:broader        wto:o3 .
+
+wto:o3.8.1 a skos:Concept ;          # Kasten
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.8.1" ;
+    skos:prefLabel      "Kasten"@de ,
+                        "Box"@en ;
+    skos:broader        wto:o3.8 .
+
+wto:o3.8.2 a skos:Concept ;          # Schrank
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.8.2" ;
+    skos:prefLabel      "Schrank"@de ,
+                        "Cabinet"@en ;
+    skos:broader        wto:o3.8 .
+
+wto:o3.9 a skos:Concept ;          # Fahrzeug
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.9" ;
+    skos:prefLabel      "Fahrzeug"@de ,
+                        "Vehicle"@en ;
+    skos:narrower       wto:o3.9.1 ;   # Bicycle
+    skos:broader        wto:o3 .
+
+wto:o3.9.1 a skos:Concept ;          # Fahrrad
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.9.1" ;
+    skos:prefLabel      "Fahrrad"@de ,
+                        "Bicycle"@en ;
+    skos:broader        wto:o3.9 .
+
+wto:o3.10 a skos:Concept ;         # Lohntüte
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.10" ;
+    skos:prefLabel      "Lohntüte"@de ,
+                        "Pay envelope"@en ;
+    skos:broader        wto:o3 .
+
+wto:o3.11 a skos:Concept ;         # Produkt
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.11" ;
+    skos:prefLabel      "Produkt"@de ,
+                        "Product"@en ;
+    skos:narrower       wto:o3.11.1 ,   # Drawing
+                        wto:o3.11.2 ;   # Model
+    skos:broader        wto:o3 .
+
+wto:o3.11.1 a skos:Concept ;         # Zeichnung
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.11.1" ;
+    skos:prefLabel      "Zeichnung"@de ,
+                        "Drawing"@en ;
+    skos:broader        wto:o3.11 .
+
+wto:o3.11.2 a skos:Concept ;         # Modell
+    skos:inScheme       wto:scheme ;
+    skos:notation       "o3.11.2" ;
+    skos:prefLabel      "Modell"@de ,
+                        "Model"@en ;
+    skos:broader        wto:o3.11 .

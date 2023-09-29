@@ -1,19 +1,19 @@
-@prefix wtm: <https://w3id.org/mpilhlt/worktime_meta/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wtm:  <https://w3id.org/mpilhlt/worktime_meta/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vs: <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs:   <https://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 wtm:scheme a skos:ConceptScheme ;
-    dct:title           "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ,
-                        "MPILHLT concepts of regulations of working time, reflexive and meta-aspects"@en ;
-    dct:description     "Begriffsschema für Arbeitszeitregelungen, reflexive und Meta-Angaben"@de ,
-                        "Concept scheme for regulations of working time, reflexive and meta-aspects"@en ;
-    skos:prefLabel      "MPILHLT Begriffe der Arbeitszeitregelung, reflexive und Meta-Angaben"@de ,
-                        "MPILHLT concepts of regulations of working time, reflexive and meta-aspects"@en ;
+    dct:title           "MPILHLT Begriffe der Arbeitsregulierung, reflexive und Meta-Angaben"@de ,
+                        "MPILHLT concepts of regulations of work, reflexive and meta-aspects"@en ;
+    dct:description     "Begriffsschema für die Beschreibung von reflexiven und Meta-Angaben im Rahmen von Regulierungen von Arbeit"@de ,
+                        "Concept scheme for the description of reflexive and meta-aspects in the context of regulations of work"@en ;
+    skos:prefLabel      "MPILHLT Begriffe der Arbeitsregulierung, reflexive und Meta-Angaben"@de ,
+                        "MPILHLT concepts of regulations of work, reflexive and meta-aspects"@en ;
     dct:created         "2022-06-07"^^xsd:date ;
     dct:issued          "2022-06-07"^^xsd:date ;
     dct:modified        "2023-09-28"^^xsd:date ;
@@ -28,12 +28,12 @@ wtm:scheme a skos:ConceptScheme ;
                         "Wagner, Andreas" ,
                         "Wolf, Johanna" ;
     dct:license         <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Work Time Regulations. SKOS Concept Scheme. Version 0.0.3. URL: <https://w3id.org/mpilhlt/worktime_meta/0.0.3/scheme>"@de ;
+    dct:bibliographicCitation  "Collin, P. et al.: Concepts of Regulations of Work. SKOS Concept Scheme. Version 0.0.4. URL: <https://w3id.org/mpilhlt/worktime_meta/0.0.4/scheme>"@de ;
     rdfs:seeAlso        <https://www.lhlt.mpg.de/research-project/non-state-law-of-the-economy> ;
     vann:preferredNamespacePrefix "wtm" ;
     vann:preferredNamespaceUri <https://w3id.org/mpilhlt/worktime_meta/> ;
-    owl:versionInfo     "0.0.3" ;
-    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_meta/0.0.3> ;
+    owl:versionInfo     "0.0.4" ;
+    owl:versionIRI      <https://w3id.org/mpilhlt/worktime_meta/0.0.4> ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wtm:m5 . # Condition of being in force
 
