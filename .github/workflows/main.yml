@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v4 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
           persist-credentials: false
 
@@ -31,13 +31,25 @@ jobs:
 
       - run: mkdir data
 
+      - run: chmod -R 777 data # user in container is node which won't have write access to public
+
       - run: git clone https://github.com/mpilhlt/vocabs-worktime.git
 
       - name: make .env.production file
         run: echo "BASEURL=/vocabs-worktime" > .env.production
 
+      - name: make .env file
+        run: echo "BASEURL=/vocabs-worktime" > .env
+
       - name: build public dir with docker image
-        run: docker run -v $(pwd)/public:/app/public -v $(pwd)/data:/app/data -v $(pwd)/.env.production:/app/.env.production skohub/skohub-vocabs-docker:latest
+        run: >
+          docker run
+          -v $(pwd)/public:/app/public
+          -v $(pwd)/data:/app/data
+          -v $(pwd)/.env.production:/app/.env.production
+          -v $(pwd)/.env:/app/.env
+          -e GATSBY_RESPOSITORY_URL=https://github.com/skohub-io/skohub-docker-vocabs.git
+          skohub/skohub-vocabs-docker:latest
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
