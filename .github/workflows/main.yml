@@ -31,7 +31,9 @@ jobs:
 
       - run: mkdir data
 
-      - run: chmod -R 777 data # user in container is node which won't have write access to public
+      - run: chmod -R 2777 data # user in container is node which won't have write access to public
+
+      - run: chmod -R 2777 public # user in container is node which won't have write access to public
 
       - run: git clone https://github.com/mpilhlt/vocabs-worktime.git
 
