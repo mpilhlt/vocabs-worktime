@@ -35,7 +35,7 @@ jobs:
 
       - run: chmod -R 2777 public # user in container is node which won't have write access to public
 
-      - run: git clone https://github.com/mpilhlt/vocabs-worktime.git
+      - run: git clone https://github.com/mpilhlt/vocabs-worktime.git data/
 
       - name: make .env.production file
         run: echo "BASEURL=/vocabs-worktime" > .env.production
