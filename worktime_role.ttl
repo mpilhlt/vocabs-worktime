@@ -37,8 +37,6 @@ wtr:scheme a skos:ConceptScheme ;
     vs:term_status      "testing" ;
     skos:hasTopConcept  wtr:r2 . # Role/function
 
-# erwachsene, jugendliche, weibliche Arbeiter usw. als Unterkategorien
-
 wtr:r2 a skos:Concept ;          # Social Role/Function
     skos:inScheme       wtr:scheme ;
     skos:topConceptOf   wtr:scheme ;

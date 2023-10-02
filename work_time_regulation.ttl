@@ -35,775 +35,1236 @@ wt:scheme a skos:ConceptScheme ;
     owl:versionInfo     "0.0.4" ;
     owl:versionIRI      <https://w3id.org/mpilhlt/worktime/0.0.4> ;
     vs:term_status      "testing" ;
-    skos:hasTopConcept  wt:n0 , # Regulatory Concept
-                        wt:n1 , # Activity
-                        wt:n2 , # Role/function
-                        wt:n3 , # Object
-                        wt:n4 , # Normative Assessment
-                        wt:n5 . # Condition of being in force
+    skos:hasTopConcept  wt:t0 , # Regulatory Concept
+                        wt:a1 , # Activity
+                        wt:r2 , # Role/function
+                        wt:o3 , # Object
+                        wt:p4 , # Prescriptive Assessment
+                        wt:m5 . # Condition of being in force
 
-
-wt:n0 a skos:Concept ;        # Regulatory Concept
+wt:t0 a skos:Concept ;          # Regulatory Concept
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "0" ;
+    skos:notation       "t0" ;
     skos:prefLabel      "Regelungsbegriff"@de ;
     skos:scopeNote      "Regulativer Begriff"@de ;
-    skos:narrower       wt:n0.1 , # Working time
-                        wt:n0.2 , # Overwork
-                        wt:n0.3 , # Nighttime work
-                        wt:n0.4 , # Work on holidays
-                        wt:n0.5 , # Absence
-                        wt:n0.6 , # Control mechanism
-                        wt:n0.7 , # Punishment
-                        wt:n0.8 . # Incentive
+    skos:narrower       wt:t0.1 , # Working time
+                        wt:t0.2 , # Overwork
+                        wt:t0.3 , # Nighttime work
+                        wt:t0.4 , # Work on holidays
+                        wt:t0.5 , # Absence
+                        wt:t0.6 , # Control mechanism
+                        wt:t0.7 , # Punishment
+                        wt:t0.8 , # Incentive
+                        wt:t0.9 . # Beginning/End of work relationship
 
-wt:n0.1 a skos:Concept ;          # Working time
+wt:t0.1 a skos:Concept ;          # Working time
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1" ;
+    skos:notation       "t0.1" ;
     skos:prefLabel      "Arbeitszeit"@de ;
-    skos:narrower       wt:n0.1.1 ,   # Workday
-                        wt:n0.1.2 ;   # Duration
-    skos:broader        wt:n0 .
+    skos:narrower       wt:t0.1.1 ,   # Workday
+                        wt:t0.1.2 ;   # Duration
+    skos:broader        wt:t0 .
 
-wt:n0.1.1 a skos:Concept ;        # Workday
+wt:t0.1.1 a skos:Concept ;          # Workday
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.1" ;
+    skos:notation       "t0.1.1" ;
     skos:prefLabel      "Arbeitstag"@de ;
-    skos:narrower       wt:n0.1.1.1 ,
-                        wt:n0.1.1.2 ;
-    skos:broader        wt:n0.1 .
+    skos:narrower       wt:t0.1.1.1 ,
+                        wt:t0.1.1.2 ;
+    skos:broader        wt:t0.1 .
 
-wt:n0.1.1.1 a skos:Concept ;      # regular workday
+wt:t0.1.1.1 a skos:Concept ;          # regular workday
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.1.1" ;
+    skos:notation       "t0.1.1.1" ;
     skos:prefLabel      "Regulärer Werktag"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. Montags von früh 7 bis Abends 8 Uhr, Sonnabends von früh 6 bis Abends 5 Uhr, ***alle übrigen Arbeitstage*** von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
-    skos:broader        wt:n0.1.1 .
+    skos:broader        wt:t0.1.1 .
 
-wt:n0.1.1.2 a skos:Concept ;      # extraordinary workday
+wt:t0.1.1.2 a skos:Concept ;          # extraordinary workday
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.1.2" ;
+    skos:notation       "t0.1.1.2" ;
     skos:prefLabel      "Sonderwerktag"@de ;
-    skos:broader        wt:n0.1.1 ;
-    skos:narrower       wt:n0.1.1.2.1 ,
-                        wt:n0.1.1.2.2 .
+    skos:broader        wt:t0.1.1 ;
+    skos:narrower       wt:t0.1.1.2.1 ,
+                        wt:t0.1.1.2.2 .
 
-wt:n0.1.1.2.1 a skos:Concept ;    # Monday
+wt:t0.1.1.2.1 a skos:Concept ;          # Monday
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.1.2.1" ;
+    skos:notation       "t0.1.1.2.1" ;
     skos:prefLabel      "Montag"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. ***Montags von*** früh 7 bis Abends 8 Uhr, Sonnabends von früh 6 bis Abends 5 Uhr, alle übrigen Arbeitstage von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
-    skos:broader        wt:n0.1.1.2 .
+    skos:broader        wt:t0.1.1.2 .
 
-wt:n0.1.1.2.2 a skos:Concept ;    # Saturday
+wt:t0.1.1.2.2 a skos:Concept ;          # Saturday
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.1.2.2" ;
+    skos:notation       "t0.1.1.2.2" ;
     skos:altLabel       "Samstag"@de ;
     skos:prefLabel      "Sonnabend"@de ;
     skos:example        "Während des zweiten Michaelis und Ostern ablaufenden Jahres wird wöchentlich 72 volle Stunden gearbeitet. Montags von früh 7 bis Abends 8 Uhr, ***Sonnabends*** von früh 6 bis Abends 5 Uhr, alle übrigen Arbeitstage von früh 6 bis Abends 8 Uhr. (`00009_FO_Haubold_Chemnitz_1834`)"@de ;
-    skos:broader        wt:n0.1.1.2 .
+    skos:broader        wt:t0.1.1.2 .
 
-wt:n0.1.2 a skos:Concept ;        # Duration
+wt:t0.1.2 a skos:Concept ;          # Duration
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.2" ;
+    skos:notation       "t0.1.2" ;
     skos:prefLabel      "Arbeitsdauer"@de ;
-    skos:narrower       wt:n0.1.2.1 ,
-                        wt:n0.1.2.2 ;
-    skos:broader        wt:n0.1 .
+    skos:narrower       wt:t0.1.2.1 ,
+                        wt:t0.1.2.2 ;
+    skos:broader        wt:t0.1 .
 
-wt:n0.1.2.1 a skos:Concept ;      # Duration, daily
+wt:t0.1.2.1 a skos:Concept ;          # Duration, daily
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.2.1" ;
+    skos:notation       "t0.1.2.1" ;
     skos:prefLabel      "Arbeitsdauer, täglich"@de ;
-    skos:broader        wt:n0.1.2 .
+    skos:broader        wt:t0.1.2 .
 
-wt:n0.1.2.2 a skos:Concept ;      # Duration, weekly
+wt:t0.1.2.2 a skos:Concept ;          # Duration, weekly
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.1.2.2" ;
+    skos:notation       "t0.1.2.2" ;
     skos:prefLabel      "Arbeitsdauer, wöchentlich"@de ;
-    skos:broader        wt:n0.1.2 .
+    skos:broader        wt:t0.1.2 .
 
-wt:n0.2 a skos:Concept ;          # Overwork
+wt:t0.2 a skos:Concept ;          # Overwork
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.2" ;
+    skos:notation       "t0.2" ;
     skos:prefLabel      "Überarbeit"@de ;
     skos:example        "Zur Leistung von ***Ueberstunden***, welche über die normale, in der Arbeitsordnung festgesetzten Zeit hinausgehen und nach Möglichkeit vermieden werden, sowie zur Nachtarbeit sind Arbeitnehmer, wenn nicht ein genügender Entschuldigungsgrund vorliegt, nach Maßgabe der hierfür geltenden gesetzlichen Vorschriften verpflichtet. (`00013_AO_Entwurf_unbekannt_1912`)"@de ;
-    skos:broader        wt:n0 .
+    skos:broader        wt:t0 .
 
-wt:n0.3 a skos:Concept ;          # Nighttime work
+wt:t0.3 a skos:Concept ;          # Nighttime work
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.3" ;
+    skos:notation       "t0.3" ;
     skos:prefLabel      "Nachtarbeit"@de ;
     skos:example        "Zur Leistung von Ueberstunden, welche über die normale, in der Arbeitsordnung festgesetzten Zeit hinausgehen und nach Möglichkeit vermieden werden, sowie zur ***Nachtarbeit*** sind Arbeitnehmer, wenn nicht ein genügender Entschuldigungsgrund vorliegt, nach Maßgabe der hierfür geltenden gesetzlichen Vorschriften verpflichtet. (`00013_AO_Entwurf_unbekannt_1912`)"@de ;
-    skos:broader        wt:n0 .
+    skos:broader        wt:t0 .
 
-wt:n0.4 a skos:Concept ;          # Work on holidays
+wt:t0.4 a skos:Concept ;          # Work on holidays
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.4" ;
+    skos:notation       "t0.4" ;
     skos:prefLabel      "Sonn-/Feiertagsarbeit"@de ;
-    skos:broader        wt:n0 .
+    skos:broader        wt:t0 .
 
-wt:n0.5 a skos:Concept ;          # Absence
+wt:t0.5 a skos:Concept ;          # Absence
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5" ;
+    skos:notation       "t0.5" ;
     skos:prefLabel      "Abwesenheit"@de ;
-    skos:narrower       wt:n0.5.1 ,   # Break
-                        wt:n0.5.2 ,   # Training
-                        wt:n0.5.3 ,   # Holidays
-                        wt:n0.5.4 ,   # Accident
-                        wt:n0.5.5 ,   # Social reason
-                        wt:n0.5.6 ,   # Coming too late
-                        wt:n0.5.7 ,   # Blue monday
-                        wt:n0.5.8 ;   # Sickness
-    skos:broader        wt:n0 .
+    skos:narrower       wt:t0.5.1 ,   # Break
+                        wt:t0.5.2 ,   # Training
+                        wt:t0.5.3 ,   # Holidays
+                        wt:t0.5.4 ,   # Accident
+                        wt:t0.5.5 ,   # Social reason
+                        wt:t0.5.6 ,   # Coming too late
+                        wt:t0.5.7 ,   # Blue monday
+                        wt:t0.5.8 ;   # Sickness
+    skos:broader        wt:t0 .
 
-wt:n0.5.1 a skos:Concept ;
+wt:t0.5.1 a skos:Concept ;          # Pause
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.1" ;
+    skos:notation       "t0.5.1" ;
     skos:prefLabel      "Pause"@de ;
-    skos:broader        wt:n0.5 .
+    skos:altLabel       "Pausen"@de,
+                        "Mittag"@de,
+                        "Mittagspause"@de,
+                        "Mittagspausen"@de,
+                        "Vesperpause"@de,
+                        "Vesperpausen"@de,
+                        "Frühstück"@de,
+                        "Frühstückspause"@de,
+                        "Frühstückspausen"@de,
+                        "Arbeitspause"@de,
+                        "Arbeitspausen"@de;
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.2 a skos:Concept ;
+wt:t0.5.2 a skos:Concept ;          # Fortbildung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.2" ;
-    skos:altLabel       "Fortbildung"@de ;
+    skos:notation       "t0.5.2" ;
     skos:prefLabel      "Schulung"@de ;
-    skos:broader        wt:n0.5 .
+    skos:altLabel       "Fortbildung"@de ,
+                        "Weiterbildung"@de ;
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.3 a skos:Concept ;
+wt:t0.5.3 a skos:Concept ;          # Urlaub
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.3" ;
+    skos:notation       "t0.5.3" ;
     skos:prefLabel      "Urlaub"@de ;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.4 a skos:Concept ;
+wt:t0.5.4 a skos:Concept ;          # Betriebsunfall
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.4" ;
+    skos:notation       "t0.5.4" ;
     skos:prefLabel      "Betriebsunfall"@de ;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.5 a skos:Concept ;
+wt:t0.5.5 a skos:Concept ;          # sozialer Grung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.5" ;
+    skos:notation       "t0.5.5" ;
     skos:prefLabel      "Sozialer Grund"@de ;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.6 a skos:Concept ;
+wt:t0.5.6 a skos:Concept ;          # Zuspätkommen
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.6" ;
+    skos:notation       "t0.5.6" ;
     skos:altLabel       "Zuspätkommen"@de ;
     skos:prefLabel      "Verspätung"@de;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.7 a skos:Concept ;
+wt:t0.5.7 a skos:Concept ;          # Blauer Montag
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.7" ;
+    skos:notation       "t0.5.7" ;
     skos:prefLabel      "Blauer Montag"@de ;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.5.8 a skos:Concept ;
+wt:t0.5.8 a skos:Concept ;          # Krankheit
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.5.8" ;
+    skos:notation       "t0.5.8" ;
     skos:prefLabel      "Krankheit"@de ;
-    skos:broader        wt:n0.5 .
+    skos:broader        wt:t0.5 .
 
-wt:n0.6 a skos:Concept ;          # Control mechanism
+wt:t0.6 a skos:Concept ;          # Control
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6" ;
+    skos:notation       "t0.6" ;
     skos:prefLabel      "Kontrolle"@de ;
-    skos:narrower       wt:n0.6.1 , # Equipment
-                        wt:n0.6.2 , # Bearer
-                        wt:n0.6.3 , # Report
-                        wt:n0.6.4 ; # Technique/approach
-    skos:broader        wt:n0 .
+    skos:narrower       wt:t0.6.1 , # Equipment
+                        wt:t0.6.2 , # Bearer
+                        wt:t0.6.3 , # Report
+                        wt:t0.6.4 ; # Technique/approach
+    skos:broader        wt:t0 .
 
-wt:n0.6.1 a skos:Concept ;
+wt:t0.6.1 a skos:Concept ;          # Kontrolleinrichtung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.1" ;
+    skos:notation       "t0.6.1" ;
     skos:prefLabel      "Kontrolleinrichtung"@de ;
-    skos:broader        wt:n0.6 .
+    skos:altLabel       "Kontrolleinrichtungen"@de ,
+                        "Kontrollsystem"@de ;
+    skos:broader        wt:t0.6 .
 
-wt:n0.6.2 a skos:Concept ;
+wt:t0.6.2 a skos:Concept ;          # Träger der Kontrolle
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.2" ;
+    skos:notation       "t0.6.2" ;
     skos:prefLabel      "Träger der Kontrolle"@de ;
     skos:scopeNote      "*Träger der Kontrolle* ist eine ***thematische*** Rolle (im Interaktionsrahmen *Kontrolle*), sie kann ggf. durch Personen wahrgenommen werden, die anhand ihrer ***sozialen*** Rolle oder Funktion (*Meister*, *Pförtner*) identifiziert werden."@de ;
-    skos:broader        wt:n0.6 .
+    skos:broader        wt:t0.6 .
 
-wt:n0.6.3 a skos:Concept ;
+wt:t0.6.3 a skos:Concept ;          # Meldung (Kontrolle)
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.3" ;
-    skos:prefLabel      "Meldung"@de ;
-    skos:narrower       wt:n0.6.3.1 , # Deadline
-                        wt:n0.6.3.2 ; # Acceptor
-    skos:broader        wt:n0.6 .
+    skos:notation       "t0.6.3" ;
+    skos:prefLabel      "Meldung (Kontrolle)"@de ;
+    skos:altLabel       "Meldung"@de ;
+    skos:narrower       wt:t0.6.3.1 , # Deadline
+                        wt:t0.6.3.2 ; # Acceptor
+    skos:broader        wt:t0.6 .
 
-wt:n0.6.3.1 a skos:Concept ;
+wt:t0.6.3.1 a skos:Concept ;          # Frist (Meldung)
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.3.1" ;
-    skos:prefLabel      "Frist"@de ;
-    skos:broader        wt:n0.6.3 .
+    skos:notation       "t0.6.3.1" ;
+    skos:prefLabel      "Frist (Meldung)"@de ;
+    skos:altLabel       "Frist"@de ;
+    skos:broader        wt:t0.6.3 .
 
-wt:n0.6.3.2 a skos:Concept ;
+wt:t0.6.3.2 a skos:Concept ;          # Meldungsempfänger
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.3.2" ;
+    skos:notation       "t0.6.3.2" ;
     skos:prefLabel      "Meldungsempfänger"@de ;
     skos:scopeNote      "*Meldungsempfänger* ist eine ***thematische*** Rolle (im Interaktionsrahmen *Kontrolle*), sie kann durch Personen wahrgenommen werden, die anhand ihrer ***sozialen*** Rolle oder Funktion (*Meister*, *Pförtner*) identifiziert werden."@de ;
-    skos:broader        wt:n0.6.3 .
+    skos:broader        wt:t0.6.3 .
 
-wt:n0.6.4 a skos:Concept ;
+wt:t0.6.4 a skos:Concept ;          # Kontrolltechnik
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.4" ;
+    skos:notation       "t0.6.4" ;
     skos:prefLabel      "Kontrolltechnik"@de ;
-    skos:narrower       wt:n0.6.4.1 , # Self-Control
-                        wt:n0.6.4.2 ; # Disciplinary
-    skos:broader        wt:n0.6 .
+    skos:narrower       wt:t0.6.4.1 , # Self-Control
+                        wt:t0.6.4.2 ; # Disciplinary
+    skos:broader        wt:t0.6 .
 
-wt:n0.6.4.1 a skos:Concept ;
+wt:t0.6.4.1 a skos:Concept ;          # Selbstkontrolle
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.4.1" ;
+    skos:notation       "t0.6.4.1" ;
     skos:prefLabel      "Selbstkontrolle"@de ;
-    skos:broader        wt:n0.6.4 .
+    skos:broader        wt:t0.6.4 .
 
-wt:n0.6.4.2 a skos:Concept ;
+wt:t0.6.4.2 a skos:Concept ;          # Disziplinarische Kontrolle
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.6.4.2" ;
+    skos:notation       "t0.6.4.2" ;
     skos:prefLabel      "Disziplinarische Kontrolle"@de ;
-    skos:broader        wt:n0.6.4 .
+    skos:broader        wt:t0.6.4 .
 
-wt:n0.7 a skos:Concept ;          # Punishment
+wt:t0.7 a skos:Concept ;          # Strafe
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7" ;
+    skos:notation       "t0.7" ;
     skos:prefLabel      "Strafe"@de ;
-    skos:narrower       wt:n0.7.1 ,   # Monetary fine
-                        wt:n0.7.2 ,   # Lock-out
-                        wt:n0.7.3 ,   # Adhortatory letter
-                        wt:n0.7.4 ,   # Dismissal
-                        wt:n0.7.5 ;   # Demotion/pay system
-    skos:broader        wt:n0 .
+    skos:altLabel       "Ordnungsstrafe"@de ,
+                        "Ordnungsstrafen"@de ,
+                        "Strafen"@de ,
+                        "Strafbestimmungen"@de ,
+                        "Bestrafung"@de ,
+                        "bestraft"@de ,
+                        "Strafmaßes"@de ,
+                        "Strafmaß"@de ,
+                        "geahndet"@de ;
+    skos:narrower       wt:t0.7.1 ,   # Monetary fine
+                        wt:t0.7.2 ,   # Lock-out
+                        wt:t0.7.3 ,   # Adhortatory letter
+                        wt:t0.7.4 ,   # Dismissal
+                        wt:t0.7.5 ;   # Demotion/pay system
+    skos:broader        wt:t0 .
 
-wt:n0.7.1 a skos:Concept ;
+wt:t0.7.1 a skos:Concept ;          # Geldstrafe
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7.1" ;
+    skos:notation       "t0.7.1" ;
     skos:prefLabel      "Geldstrafe"@de ;
-    skos:broader        wt:n0.7 .
+    skos:altLabel       "Geldstrafen"@de ,
+                        "Strafgeld"@de ,
+                        "Strafgelder"@de ,
+                        "Bußen"@de ,
+                        "Buße"@de ,
+                        "verlustig"@de ,
+                        "Verlust des Lohnes"@de ,
+                        "Lohnabzug"@de ,
+                        "Abzug"@de ,
+                        "Abzuge"@de ,
+                        "zu zahlen"@de ;
+    skos:broader        wt:t0.7 .
 
-wt:n0.7.2 a skos:Concept ;
+wt:t0.7.2 a skos:Concept ;          # Aussperrung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7.2" ;
+    skos:notation       "t0.7.2" ;
     skos:prefLabel      "Aussperrung"@de ;
-    skos:broader        wt:n0.7 .
+    skos:broader        wt:t0.7 .
 
-wt:n0.7.3 a skos:Concept ;
+wt:t0.7.3 a skos:Concept ;          # Abmahnung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7.3" ;
+    skos:notation       "t0.7.3" ;
     skos:altLabel       "Abmahnung"@de ;
     skos:prefLabel      "Verwarnung"@de ;
-    skos:broader        wt:n0.7 .
+    skos:broader        wt:t0.7 .
 
-wt:n0.7.4 a skos:Concept ;
+wt:t0.7.4 a skos:Concept ;          # Kündigung (Strafe)
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7.4" ;
+    skos:notation       "t0.7.4" ;
+    skos:prefLabel      "Kündigung (Strafe)"@de ;
     skos:altLabel       "Entlassung"@de ,
-                        "fristlose Kündigung"@de ;
-    skos:prefLabel      "Kündigung"@de ;
-    skos:broader        wt:n0.7 .
+                        "fristlose Kündigung"@de ,
+                        "entlassen"@de ,
+                        "Arbeitsentlassung"@de ;
+    skos:broader        wt:t0.7 .
 
-wt:n0.7.5 a skos:Concept ;
+wt:t0.7.5 a skos:Concept ;          # Lohnkürzung
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.7.5" ;
+    skos:notation       "t0.7.5" ;
+    skos:prefLabel      "Lohnkürzung"@de ;
     skos:altLabel       "Herabstufung"@de ,
                         "Zurückstufung"@de ,
-                        "Degradierung"@de ;
-    skos:prefLabel      "Lohnsystem"@de ;
-    skos:broader        wt:n0.7 .
+                        "Degradierung"@de ,
+                        "Lohnsystem"@de ;
+    skos:broader        wt:t0.7 .
 
-wt:n0.8 a skos:Concept ;          # Incentive
+wt:t0.8 a skos:Concept ;          # Incentive
     skos:inScheme       wt:scheme ;
-    skos:notation       "0.8" ;
+    skos:notation       "t0.8" ;
+    skos:prefLabel      "Anreiz"@de ;
     skos:altLabel       "Belohnung"@de ,
                         "Prämie"@de ;
-    skos:prefLabel      "Anreiz"@de ;
-    skos:broader        wt:n0 .
+    skos:broader        wt:t0 ;
+    skos:narrower       wt:t0.8.1 , # Lohn
+                        wt:t0.8.2 . # Prämie
 
+wt:t0.8.1 a skos:Concept ;          # Lohn
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.8.1" ;
+    skos:prefLabel      "Lohn"@de ;
+    skos:broader        wt:t0.8 ;
+    skos:narrower       wt:t0.8.1.1 , # Zeitlohn
+                        wt:t0.8.1.2 , # Stücklohn
+                        wt:t0.8.1.3 . # Lohnperiode
 
+wt:t0.8.1.1 a skos:Concept ;          # Zeitlohn
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.8.1.1" ;
+    skos:prefLabel      "Zeitlohn"@de ;
+    skos:broader        wt:t0.8.1 .
 
-wt:n1 a skos:Concept ;        # Activity
+wt:t0.8.1.2 a skos:Concept ;          # Stücklohn
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.8.1.2" ;
+    skos:prefLabel      "Stücklohn"@de ;
+    skos:broader        wt:t0.8.1 .
+
+wt:t0.8.1.3 a skos:Concept ;          # Lohnperiode
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.8.1.3" ;
+    skos:prefLabel      "Lohnperiode"@de ;
+    skos:broader        wt:t0.8.1 .
+
+wt:t0.8.2 a skos:Concept ;          # Prämie
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.8.2" ;
+    skos:prefLabel      "Prämie"@de ,
+                        "Bonus"@en ;
+    skos:broader        wt:t0.8 .
+
+wt:t0.9 a skos:Concept ;          # Anfang/Ende d. Beschäftigung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.9" ;
+    skos:prefLabel      "Anfang und Ende des Arbeitsverhältnisses"@de ;
+    skos:broader        wt:t0 ;
+    skos:narrower       wt:t0.9.1 , # Einstellung
+                        wt:t0.9.2 , # Kündigung
+                        wt:t0.9.3 . # Verrentung
+
+wt:t0.9.1 a skos:Concept ;          # Einstellung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.9.1" ;
+    skos:prefLabel      "Einstellung"@de ;
+    skos:broader        wt:t0.9 .
+
+wt:t0.9.2 a skos:Concept ;          # Kündigung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.9.2" ;
+    skos:prefLabel      "Kündigung"@de ;
+    skos:altLabel       "Entlassung"@de ;
+    skos:broader        wt:t0.9 .
+
+wt:t0.9.3 a skos:Concept ;          # Verrentung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "t0.9.3" ;
+    skos:prefLabel      "Verrentung"@de ;
+    skos:altLabel       "Rente"@de ,
+                        "Pension"@de ,
+                        "Ruhestand"@de ;
+    skos:broader        wt:t0.9 .
+
+wt:a1 a skos:Concept ;        # Activity
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "1" ;
-    skos:prefLabel      "Tätigkeit"@de ;
+    skos:notation       "a1" ;
+    skos:prefLabel      "Tätigkeit"@de ,
+                        "Activity"@en ;
+    skos:altLabel       "Verhalten"@de ,
+                        "Behaviour"@en ;
     skos:scopeNote      "Verhalten oder Tätigkeit, die Gegenstand normativer Regulierung der Arbeitszeit ist."@de ;
-    skos:narrower       wt:n1.1 , # Smoking
-                        wt:n1.2 , # Drinking alcohol
-                        wt:n1.3 , # Eating
-                        wt:n1.4 , # Talking
-                        wt:n1.5 , # Going to the toilet
-                        wt:n1.6 , # Changing clothes
-                        wt:n1.7 , # Cleaning tools & machinery
-                        wt:n1.8 , # Wedding
-                        wt:n1.9 , # Giving birth
-                        wt:n1.10 , # Dying
-                        wt:n1.11 , # Tarrying/Walking/Accessing
-                        wt:n1.12 . # Bringing/Taking sth.
+    skos:narrower       wt:a1.1 , # Smoking
+                        wt:a1.2 , # Drinking alcohol
+                        wt:a1.3 , # Eating
+                        wt:a1.4 , # Talking
+                        wt:a1.5 , # Going to the toilet
+                        wt:a1.6 , # Changing clothes
+                        wt:a1.7 , # Cleaning
+                        wt:a1.8 , # Wedding
+                        wt:a1.9 , # Giving birth
+                        wt:a1.10 , # Dying
+                        wt:a1.11 , # Tarrying/Walking/Accessing
+                        wt:a1.12 , # Bringing/Removing
+                        wt:a1.13 , # Selling
+                        wt:a1.14 . # Reporting
 
-wt:n1.1 a skos:Concept ;          # Rauchen
+wt:a1.1 a skos:Concept ;          # Rauchen
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.1" ;
+    skos:notation       "a1.1" ;
     skos:prefLabel      "Rauchen"@de ;
-    skos:broader        wt:n1 .
+    skos:altLabel       "schmauchen"@de ,
+                        "Tabakrauchen"@de ,
+                        "Tabak-Rauchen"@de ,
+                        "Tabak rauchen"@de ,
+                        "Zigarettenrauchen"@de ,
+                        "Cigarrenrauchen"@de ,
+                        "Zigarrenrauchen"@de ,
+                        "Anstecken von Tabakspfeifen"@de ,
+                        "Anstecken von Pfeifen"@de ,
+                        "Anstecken von Zigarren"@de ,
+                        "Anstecken von Cigarren"@de ,
+                        "Anstecken von Zigaretten"@de ;
+    skos:broader        wt:a1 .
 
-wt:n1.2 a skos:Concept ;          # Alkohol trinken
+wt:a1.2 a skos:Concept ;          # Alkohol trinken
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.2" ;
+    skos:notation       "a1.2" ;
     skos:prefLabel      "Alkohol trinken"@de ;
-    skos:broader        wt:n1 .
+    skos:altLabel       "Trunkenheit"@de ,
+                        "trinken"@de ,
+                        "betrinken"@de ,
+                        "betrunken"@de ,
+                        "angetrunken"@de ,
+                        "Sichbetrinken"@de ,
+                        "Genuss geistiger Getränke"@de ,
+                        "Genuß geistiger Getränke"@de ,
+                        "Genuss von Branntwein"@de ,
+                        "Genuß von Branntwein"@de ,
+                        "Branntweintrinken"@de ,
+                        "Biertrinken"@de ;
+    skos:broader        wt:a1 .
 
-wt:n1.3 a skos:Concept ;          # Nahrungsaufnahme
+wt:a1.3 a skos:Concept ;          # Nahrungsaufnahme
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.3" ;
+    skos:notation       "a1.3" ;
     skos:prefLabel      "Nahrungsaufnahme"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.4 a skos:Concept ;          # Gespräche führen
+wt:a1.4 a skos:Concept ;          # Gespräche führen
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.4" ;
+    skos:notation       "a1.4" ;
     skos:prefLabel      "Gespräche führen"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.5 a skos:Concept ;          # Toilettengang
+wt:a1.5 a skos:Concept ;          # Toilettengang
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.5" ;
+    skos:notation       "a1.5" ;
     skos:prefLabel      "Toilettengang"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.6 a skos:Concept ;          # Umkleiden
+wt:a1.6 a skos:Concept ;          # Umkleiden
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.6" ;
+    skos:notation       "a1.6" ;
     skos:prefLabel      "Umkleiden"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.7 a skos:Concept ;          # Maschine säubern
+wt:a1.7 a skos:Concept ;          # Maschine säubern
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.7" ;
-    skos:prefLabel      "Maschine säubern"@de ;
-    skos:broader        wt:n1 .
+    skos:notation       "a1.7" ;
+    skos:prefLabel      "säubern"@de ,
+                        "cleaning"@en ;
+    skos:altLabel       "reinigen"@de ;
+    skos:broader        wt:a1 .
 
-wt:n1.8 a skos:Concept ;          # Hochzeit
+wt:a1.8 a skos:Concept ;          # Hochzeit
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.8" ;
+    skos:notation       "a1.8" ;
     skos:prefLabel      "Hochzeit"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.9 a skos:Concept ;          # Niederkunft
+wt:a1.9 a skos:Concept ;          # Niederkunft
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.9" ;
+    skos:notation       "a1.9" ;
     skos:prefLabel      "Niederkunft"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.10 a skos:Concept ;         # Tod
+wt:a1.10 a skos:Concept ;         # Tod
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.10" ;
+    skos:notation       "a1.10" ;
     skos:prefLabel      "Tod"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.11 a skos:Concept ;         # Sich aufhalten/Betreten
+wt:a1.11 a skos:Concept ;         # Sich aufhalten/Betreten
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.11" ;
+    skos:notation       "a1.11" ;
     skos:altLabel       "Betreten"@de ;
     skos:prefLabel      "Aufenthalt"@de ;
-    skos:broader        wt:n1 .
+    skos:broader        wt:a1 .
 
-wt:n1.12 a skos:Concept ;         # Mitbringen/wegnehmen
+wt:a1.12 a skos:Concept ;         # Mitbringen/wegnehmen
     skos:inScheme       wt:scheme ;
-    skos:notation       "1.12" ;
+    skos:notation       "a1.12" ;
     skos:prefLabel      "Mitbringen oder Wegnehmen"@de ;
-    skos:broader        wt:n1 .
+    skos:altLabel       "Einbringen"@de ;
+    skos:broader        wt:a1 ;
+    skos:narrower       wt:a1.12.1 . # Losing
 
+wt:a1.12.1 a skos:Concept ;         # Verlieren
+    skos:inScheme       wt:scheme ;
+    skos:notation       "a1.12.1" ;
+    skos:prefLabel      "Verlieren"@de ,
+                        "losing"@en ;
+    skos:altLabel       "Verlust"@de ;
+    skos:broader        wt:a1.12 .
 
-wt:n2 a skos:Concept ;        # Social Role/Function
+wt:a1.13 a skos:Concept ;         # Verkauf
+    skos:inScheme       wt:scheme ;
+    skos:notation       "a1.13" ;
+    skos:prefLabel      "Verkaufen"@de ,
+                        "selling"@en ;
+    skos:altLabel       "Verkauf"@de ;
+    skos:broader        wt:a1 .
+
+wt:a1.14 a skos:Concept ;         # Melden
+    skos:inScheme       wt:scheme ;
+    skos:notation       "a1.14" ;
+    skos:prefLabel      "Melden (Tätigkeit)"@de ,
+                        "reporting"@en ;
+    skos:altLabel       "Melden"@de ,
+                        "Meldung"@de ;
+    skos:broader        wt:a1 .
+
+wt:r2 a skos:Concept ;          # Social Role/Function
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "2" ;
-    skos:altLabel       "Funktion"@de ;
+    skos:notation       "r2" ;
+    skos:altLabel       "Funktion"@de ,
+                        "soziale Rolle"@de ,
+                        "Function"@en ;
     skos:prefLabel      "Rolle"@de ;
     skos:definition     "Von normativen Regeln definierte oder in ihnen erwähnte soziale Rolle oder Kategorie von Personen"@de ;
     skos:scopeNote      "Durch eine Berufsbezeichnung ('Pförtner'), die Funktion im allgemeinen Betrieb ('Vorarbeiter') oder den sozialen Kontext ('jugendliche Arbeiter') bestimmte Erwartungsbündel an die so qualifizierten Personen, die von der aktuell vorliegenden Handlung unabhängig sind. Davon zu unterscheiden sind Rollen, die die Aufgabenverteilung in konkreten Interaktionen bestimmen (Kauf: 'Käufer', 'Verkäufer'). Erstere werden in der Literatur häufig als 'soziale Rollen' diskutiert, letztere als 'thematische Rollen'. Häufig beziehen sich normative Regelungen darauf, dass die Wahrnehmung bestimmter thematischer Rollen an die soziale Rolle gebunden ist (z.B. mag die thematische Rolle des 'Meldungsempfängers' in bestimmten Kontexten der Meldung von Abwesenheit den 'Meistern' vorbehalten sein. Vgl. Goy et al.: 'On the role of thematic roles in a historical event ontology', in: Applied Ontology, vol. 13, no. 1, pp. 19-39, 2018. DOI: 10.3233/AO-170192, <https://content.iospress.com/articles/applied-ontology/ao192>; Masolo, et al: 'Social Roles and Their Descriptions', in: In D. Dubois, C. Welty and M.A. Williams (Eds.), Proc. KR2004, Palo Alto, CA: AAAI Press, 2004, pp. 267–277. <http://www.loa.istc.cnr.it/old/Papers/KR04MasoloC.pdf>."@de ;
-    skos:narrower       wt:n2.1 , # Male adult worker
-                        wt:n2.2 , # Female adult worker
-                        wt:n2.3 , # Clerk
-                        wt:n2.4 , # Supervisor
-                        wt:n2.5 , # Master
-                        wt:n2.6 , # Juvenile worker
-                        wt:n2.7 , # Woman who has recently given birth
-                        wt:n2.8 , # Doorkeeper
-                        wt:n2.9 , # Works manager
-                        wt:n2.10 , # external persons
-                        wt:n2.11 , # stakeholder
-                        wt:n2.12 , # owner
-                        wt:n2.13 , # assistant
-                        wt:n2.14 , # foreman
-                        wt:n2.15 , # maschinist
-                        wt:n2.16 , # civil servant
-                        wt:n2.17 , # technician
-                        wt:n2.18 , # "simple" pension fund member
-                        wt:n2.19 , # conscript
-                        wt:n2.20 . # Vermindert Erwerbsfähige
+    skos:narrower       wt:r2.0 , # Worker
+                        wt:r2.3 , # Clerk
+                        wt:r2.4 , # Supervisor
+                        wt:r2.5 , # Master
+                        wt:r2.8 , # Doorkeeper
+                        wt:r2.9 , # Works manager
+                        wt:r2.10 , # external persons
+                        wt:r2.11 , # stakeholder
+                        wt:r2.12 , # owner
+                        wt:r2.13 , # assistant
+                        wt:r2.14 , # foreman
+                        wt:r2.15 , # maschinist
+                        wt:r2.16 , # civil servant
+                        wt:r2.17 , # technician
+                        wt:r2.18 , # "simple" pension fund member
+                        wt:r2.19 , # conscript
+                        wt:r2.20 . # Vermindert Erwerbsfähige
 
-wt:n2.1 a skos:Concept ;          # Erwachsener Arbeiter
+wt:r2.0 a skos:Concept ;          # Arbeiter
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.1" ;
+    skos:notation       "r2.0" ;
+    skos:prefLabel      "Arbeiter"@de ;
+    skos:altLabel       "gewerbliche Arbeiter"@de ,
+                        "gewerblichen Arbeitern"@de ,
+                        "Arbeiterpersonal"@de ;
+    skos:broader        wt:r2 ;
+    skos:narrower       wt:r2.1 , # adult worker
+                        wt:r2.2 , # female worker
+                        wt:r2.6 . # juvenile worker
+
+wt:r2.1 a skos:Concept ;            # Erwachsener Arbeiter
+    skos:inScheme       wt:scheme ;
+    skos:notation       "r2.1" ;
     skos:prefLabel      "Erwachsener Arbeiter"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2.0 .
 
-wt:n2.2 a skos:Concept ;          # Erwachsene Arbeiterin
+wt:r2.2 a skos:Concept ;            # Erwachsene Arbeiterin
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.2" ;
-    skos:prefLabel      "Erwachsene Arbeiterin"@de ;
-    skos:broader        wt:n2 .
+    skos:notation       "r2.2" ;
+    skos:prefLabel      "Erwachsene Arbeiterin"@de ,
+                        "Adult female worker"@en ;
+    skos:altLabel       "Arbeiterinnen"@de ,
+                        "erwachsene Arbeiterinnen"@de ,
+                        "weiblichen Geschlechtes"@de ,
+                        "Arbeiterinnen von mehr als sechzehn Jahren"@de ;
+    skos:narrower       wt:r2.2.1 ;
+    skos:broader        wt:r2.0 .
 
-wt:n2.3 a skos:Concept ;          # Angestellter/Angestellte
+wt:r2.2.1 a skos:Concept ;            # Wöchnerin
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.3" ;
-    skos:prefLabel      "Angestellter/Angestellte"@de ;
-    skos:broader        wt:n2 .
-
-wt:n2.4 a skos:Concept ;          # Vorgesetzer
-    skos:inScheme       wt:scheme ;
-    skos:notation       "2.4" ;
-    skos:prefLabel      "Vorgesetzer"@de ;
-    skos:broader        wt:n2 .
-
-wt:n2.5 a skos:Concept ;          # Meister
-    skos:inScheme       wt:scheme ;
-    skos:notation       "2.5" ;
-    skos:prefLabel      "Meister"@de ;
-    skos:broader        wt:n2 .
-
-wt:n2.6 a skos:Concept ;          # Jugendliche/r Arbeiter/in
-    skos:inScheme       wt:scheme ;
-    skos:notation       "2.6" ;
-    skos:prefLabel      "Jugendliche/r Arbeiter/in"@de ;
-    skos:broader        wt:n2 .
-
-wt:n2.7 a skos:Concept ;          # Wöchnerin
-    skos:inScheme       wt:scheme ;
-    skos:notation       "2.7" ;
+    skos:notation       "r2.2.1" ;
     skos:prefLabel      "Wöchnerin"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2.2 .
 
-wt:n2.8 a skos:Concept ;          # Portier
+wt:r2.6 a skos:Concept ;            # Jugendliche/r Arbeiter/in
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.8" ;
+    skos:notation       "r2.6" ;
+    skos:prefLabel      "Beschäftigte unter 21 Jahren"@de ;
+    skos:altLabel       "Jugendliche"@de ,
+                        "Jugendlichen"@de ,
+                        "jugendlicher Arbeiter"@de ,
+                        "jugendliche Arbeiter"@de ,
+                        "jugendlichen Arbeiter"@de ,
+                        "Unmündige"@de ,
+                        "Lehrling"@de ,
+                        "Lehrlinge"@de ,
+                        "Lehrburschen"@de ,
+                        "Arbeiter, die zum Besuch der Fortbildungsschule verpflichtet sind"@de ,
+                        "Burschen"@de ,
+                        "bis zum vollendeten 21. Lebensjahre"@de ,
+                        "Kinder unter 14 Jahren"@de ,
+                        "Minderjährige"@de ,
+                        "Minderjährigen"@de ,
+                        "minderjährige Arbeiter"@de ,
+                        "Nachwuchses"@de ,
+                        "Jungarbeiter"@de ,
+                        "jugendlichen Arbeiter unter 16 Jahren"@de ,
+                        "im Alter bis zu sechzehn Jahren"@de ;
+    skos:broader        wt:r2.0 .
+
+wt:r2.3 a skos:Concept ;          # Angestellter/Angestellte
+    skos:inScheme       wt:scheme ;
+    skos:notation       "r2.3" ;
+    skos:prefLabel      "Angestellter/Angestellte"@de ;
+    skos:broader        wt:r2 .
+
+wt:r2.4 a skos:Concept ;          # Vorgesetzer
+    skos:inScheme       wt:scheme ;
+    skos:notation       "r2.4" ;
+    skos:prefLabel      "Vorgesetzer"@de ;
+    skos:altLabel       "Vorgesetzter"@de ,
+                        "Betriebsvorgesetzter"@de ,
+                        "Vorsteher"@de ,
+                        "Abteilungsvorsteher"@de ;
+    skos:broader        wt:r2 .
+
+wt:r2.5 a skos:Concept ;          # Meister
+    skos:inScheme       wt:scheme ;
+    skos:notation       "r2.5" ;
+    skos:prefLabel      "Meister"@de ;
+    skos:altLabel       "Werkmeister"@de ,
+                        "Walzmeister"@de ;
+    skos:broader        wt:r2 .
+
+wt:r2.8 a skos:Concept ;          # Portier
+    skos:inScheme       wt:scheme ;
+    skos:notation       "r2.8" ;
     skos:altLabel       "Pförtner"@de ;
-    skos:prefLabel      "Portier"@de ;
-    skos:broader        wt:n2 .
+    skos:prefLabel      "Portier"@de ,
+                        "Porter"@en ;
+    skos:broader        wt:r2 .
 
-wt:n2.9 a skos:Concept ;          # Betriebsführer
+wt:r2.9 a skos:Concept ;          # Betriebsführer
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.9" ;
-    skos:prefLabel      "Betriebsführer"@de ;
-    skos:broader        wt:n2 .
+    skos:notation       "r2.9" ;
+    skos:prefLabel      "Fabrikleitung"@de ;
+    skos:altLabel       "Werkführer"@de ,
+                        "Werksführer"@de ,
+                        "Werksleiter"@de ,
+                        "Werkleiter"@de ,
+                        "Betriebsleiter"@de ,
+                        "Leitung"@de ,
+                        "Leiter der Fabrik"@de ,
+                        "Betriebsführer"@de ,
+                        "Geschäftsleitung"@de ,
+                        "Director"@de ,
+                        "Direktor"@de ;
+    skos:broader        wt:r2 .
 
-wt:n2.10 a skos:Concept ;         # betriebsfremde Person
+wt:r2.10 a skos:Concept ;         # betriebsfremde Person
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.10" ;
+    skos:notation       "r2.10" ;
     skos:prefLabel      "betriebsfremde Person"@de ;
-    skos:narrower       wt:n2.10.1 ,  # Wife
-                        wt:n2.10.2 ,  # Husband
-                        wt:n2.10.3 ;  # Child
-    skos:broader        wt:n2 .
+    skos:narrower       wt:r2.10.1 ,  # Wife
+                        wt:r2.10.2 ,  # Husband
+                        wt:r2.10.3 ;  # Child
+    skos:broader        wt:r2 .
 
-wt:n2.10.1 a skos:Concept ;
+wt:r2.10.1 a skos:Concept ;         # Ehefrau
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.10.1" ;
+    skos:notation       "r2.10.1" ;
     skos:prefLabel      "Ehefrau"@de ;
-    skos:broader        wt:n2.10 .
+    skos:broader        wt:r2.10 .
 
-wt:n2.10.2 a skos:Concept ;
+wt:r2.10.2 a skos:Concept ;         # Ehemann
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.10.2" ;
+    skos:notation       "r2.10.2" ;
     skos:prefLabel      "Ehemann"@de ;
-    skos:broader        wt:n2.10 .
+    skos:broader        wt:r2.10 .
 
-wt:n2.10.3 a skos:Concept ;
+wt:r2.10.3 a skos:Concept ;         # Kind
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.10.3" ;
+    skos:notation       "r2.10.3" ;
     skos:prefLabel      "Kind"@de ;
-    skos:broader        wt:n2.10 .
+    skos:broader        wt:r2.10 .
 
-wt:n2.11 a skos:Concept ;         # Interessenvertreter
+wt:r2.11 a skos:Concept ;         # Interessenvertreter
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.11" ;
-    skos:altLabel       "Arbeiterrat"@de ,
-                        "Vertrauensrat"@de ;
+    skos:notation       "r2.11" ;
     skos:prefLabel      "Interessenvertreter"@de ;
-    skos:broader        wt:n2 .
+    skos:altLabel       "Arbeiterrat"@de ,
+                        "Vertrauensrat"@de ,
+                        "Arbeiterausschuss"@de ,
+                        "Arbeiter-Ausschuss"@de ,
+                        "Arbeiterräte"@de ,
+                        "Betriebsrat"@de ,
+                        "Betriebsräte"@de ,
+                        "Arbeiter-Rat"@de ,
+                        "Arbeiter-Vertretung"@de ,
+                        "Arbeitervertretung"@de ;
+    skos:broader        wt:r2 .
 
-wt:n2.12 a skos:Concept ;         # Fabrik-/Unternehmensbesitzer
+wt:r2.12 a skos:Concept ;         # Fabrik-/Unternehmensbesitzer
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.12" ;
+    skos:notation       "r2.12" ;
     skos:altLabel       "Besitzer"@de ;
     skos:prefLabel      "Fabrik-/Unternehmensbesitzer"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.13 a skos:Concept ;         # (Handlungs-)Gehilfe
+wt:r2.13 a skos:Concept ;         # (Handlungs-)Gehilfe
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.13" ;
+    skos:notation       "r2.13" ;
     skos:altLabel       "Handlungsgehilfe"@de ;
     skos:prefLabel      "Gehilfe"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.14 a skos:Concept ;         # Vorarbeiter
+wt:r2.14 a skos:Concept ;         # Vorarbeiter
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.14" ;
+    skos:notation       "r2.14" ;
     skos:prefLabel      "Vorarbeiter"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.15 a skos:Concept ;         # Maschinist
+wt:r2.15 a skos:Concept ;         # Maschinist
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.15" ;
+    skos:notation       "r2.15" ;
     skos:prefLabel      "Maschinist"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.16 a skos:Concept ;         # Beamter
+wt:r2.16 a skos:Concept ;         # Beamter
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.16" ;
+    skos:notation       "r2.16" ;
     skos:prefLabel      "Beamter"@de ;
-    skos:broader        wt:n2 .
+    skos:altLabel       "Aufsichtsbeamter"@de ,
+                        "Beamter"@de ,
+                        "Werkbeamter"@de ,
+                        "Betriebsbeamter"@de ;
+    skos:broader        wt:r2 .
 
-wt:n2.17 a skos:Concept ;         # Techniker
+wt:r2.17 a skos:Concept ;         # Techniker
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.17" ;
+    skos:notation       "r2.17" ;
     skos:prefLabel      "Techniker"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.18 a skos:Concept ;         # ("einfaches") Kassenmitglied
+wt:r2.18 a skos:Concept ;         # ("einfaches") Kassenmitglied
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.18" ;
+    skos:notation       "r2.18" ;
     skos:altLabel       "'einfaches' Kassenmitglied"@de ;
     skos:prefLabel      "Kassenmitglied"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.19 a skos:Concept ;         # Militärpflichtiger
+wt:r2.19 a skos:Concept ;         # Militärpflichtiger
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.19" ;
+    skos:notation       "r2.19" ;
     skos:prefLabel      "Militärpflichtiger"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-wt:n2.20 a skos:Concept ;         # vermindert Erwerbsfähiger
+wt:r2.20 a skos:Concept ;         # vermindert Erwerbsfähiger
     skos:inScheme       wt:scheme ;
-    skos:notation       "2.20" ;
+    skos:notation       "r2.20" ;
     skos:prefLabel      "vermindert Erwerbsfähiger"@de ;
-    skos:broader        wt:n2 .
+    skos:broader        wt:r2 .
 
-
-wt:n3 a skos:Concept ;        # Object
+wt:o3 a skos:Concept ;          # Objekt
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "3" ;
-    skos:prefLabel      "Objekt"@de ;
+    skos:notation       "o3" ;
+    skos:prefLabel      "Objekt"@de ,
+                        "Object"@en ;
     skos:scopeNote      "In normativen Regeln erwähntes physisches Objekt"@de ;
-    skos:narrower       wt:n3.1 , # Signal device
-                        wt:n3.2 , # Token
-                        wt:n3.3 , # Machine
-                        wt:n3.4 , # Tool
-                        wt:n3.5 , # Material
-                        wt:n3.6 . # Room/Space
+    skos:narrower       wt:o3.1 , # Signal device
+                        wt:o3.2 , # Token
+                        wt:o3.3 , # Machine
+                        wt:o3.4 , # Tool
+                        wt:o3.5 , # Material
+                        wt:o3.6 , # Room or Space
+                        wt:o3.7 , # Paperwork
+                        wt:o3.8 , # Container
+                        wt:o3.9 , # Vehicles
+                        wt:o3.10 , # Pay envelope
+                        wt:o3.11 . # Product
 
-wt:n3.1 a skos:Concept ;          # Signal device
+wt:o3.1 a skos:Concept ;          # Signal device
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.1" ;
-    skos:prefLabel      "Signaleinrichtung"@de ;
-    skos:narrower       wt:n3.1.1 ,   # Factory clock
-                        wt:n3.1.2 ,   # Check clock
-                        wt:n3.1.3 ;   # Acoustic signal
-    skos:broader        wt:n3 .
+    skos:notation       "o3.1" ;
+    skos:prefLabel      "Signaleinrichtung"@de ,
+                        "Signal device"@en ;
+    skos:narrower       wt:o3.1.1 ,   # Factory clock
+                        wt:o3.1.2 ,   # Check clock
+                        wt:o3.1.3 ;   # Acoustic signal
+    skos:broader        wt:o3 .
 
-wt:n3.1.1 a skos:Concept ;          # Fabrikuhr
+wt:o3.1.1 a skos:Concept ;          # Fabrikuhr
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.1.1" ;
-    skos:altLabel       "Uhr"@de ;
-    skos:prefLabel      "Fabrikuhr"@de ;
-    skos:broader        wt:n3.1 .
+    skos:notation       "o3.1.1" ;
+    skos:prefLabel      "Fabrikuhr"@de ,
+                        "Factory clock"@en ;
+    skos:altLabel       "Uhr"@de ,
+                        "Fabriksuhr"@de ,
+                        "Fabriks-Uhr"@de ,
+                        "Betriebsuhr"@de ,
+                        "Werksuhr"@de ,
+                        "Werkuhr"@de ;
+    skos:broader        wt:o3.1 .
 
-wt:n3.1.2 a skos:Concept ;          # Stechuhr
+wt:o3.1.2 a skos:Concept ;          # Stechuhr
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.1.2" ;
-    skos:prefLabel      "Stechuhr"@de ;
-    skos:broader        wt:n3.1 .
+    skos:notation       "o3.1.2" ;
+    skos:prefLabel      "Stechuhr"@de ,
+                        "Punch clock"@en ;
+    skos:altLabel       "Kontrolluhr"@de ,
+                        "Stempeln"@de ,
+                        "stechen"@de ,
+                        "Abstempelung"@de ;
+    skos:broader        wt:o3.1 .
 
-wt:n3.1.3 a skos:Concept ;          # Tonsignal: Pfeife/Glocke/Sirene
+wt:o3.1.3 a skos:Concept ;          # Tonsignal: Pfeife, Glocke, Sirene
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.1.3" ;
+    skos:notation       "o3.1.3" ;
+    skos:prefLabel      "Signal"@de ,
+                        "Signal"@en ;
     skos:altLabel       "Sirene"@de ,
                         "Pfeife"@de,
-                        "Glocke"@de ;
-    skos:prefLabel      "Akustisches Signal"@de ;
-    skos:broader        wt:n3.1 .
+                        "Glocke"@de ,
+                        "Läuten"@de ,
+                        "Zeichen"@de ,
+                        "Fabriksignal"@de ,
+                        "akustisches Signal"@de ,
+                        "Fabrikpfeife"@de ;
+    skos:broader        wt:o3.1 .
 
-wt:n3.2 a skos:Concept ;            # Schein/Marke
+wt:o3.2 a skos:Concept ;            # Schein, Marke
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.2" ;
+    skos:notation       "o3.2" ;
+    skos:prefLabel      "Schein, Marke"@de ;
     skos:altLabel       "Schein"@de ,
                         "Marke"@de ,
                         "Passierschein"@de ,
                         "Karte"@de ,
                         "Chip"@de ,
+                        "Passirschein"@de ,
+                        "Erlaubnißkarte"@de ,
+                        "Erlaubniskarte"@de ,
+                        "Erlaubnisschein"@de ,
+                        "Schriftliche Erlaubnis"@de ,
+                        "Arbeitszeitkarte"@de ,
+                        "Durchlaßschein"@de ,
+                        "Durchlasschein"@de ,
+                        "Durchlassschein"@de ,
                         "Token"@de ;
-    skos:prefLabel      "Schein/Marke"@de ;
-    skos:broader        wt:n3 .
+    skos:broader        wt:o3 .
 
-wt:n3.3 a skos:Concept ;          # Maschine
+wt:o3.3 a skos:Concept ;          # Maschine
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.3" ;
-    skos:prefLabel      "Maschine"@de ;
-    skos:broader        wt:n3 .
+    skos:notation       "o3.3" ;
+    skos:prefLabel      "Maschine"@de ,
+                        "Machine"@en ;
+    skos:broader        wt:o3 .
 
-wt:n3.4 a skos:Concept ;          # Werkzeug
+wt:o3.4 a skos:Concept ;          # Werkzeug
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.4" ;
+    skos:notation       "o3.4" ;
     skos:prefLabel      "Werkzeug"@de ;
-    skos:broader        wt:n3 .
+    skos:broader        wt:o3 .
 
-wt:n3.5 a skos:Concept ;          # Material
+wt:o3.5 a skos:Concept ;          # Material
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.5" ;
+    skos:notation       "o3.5" ;
     skos:prefLabel      "Material"@de ;
-    skos:broader        wt:n3 .
+    skos:broader        wt:o3 .
 
-wt:n3.6 a skos:Concept ;          # Räumlichkeit
+wt:o3.6 a skos:Concept ;          # Räumlichkeit
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6" ;
+    skos:notation       "o3.6" ;
     skos:prefLabel      "Räumlichkeit"@de ;
-    skos:narrower       wt:n3.6.1 ,   # Passage/border
-                        wt:n3.6.2 ,   # Compound
-                        wt:n3.6.3 ,   # Boiler house
-                        wt:n3.6.4 ,   # Workshop
-                        wt:n3.6.5 ;   # Yard
-    skos:broader        wt:n3 .
+    skos:narrower       wt:o3.6.1 ,   # Passage, border
+                        wt:o3.6.2 ,   # Compound
+                        wt:o3.6.3 ,   # Boiler house
+                        wt:o3.6.4 ,   # Workshop
+                        wt:o3.6.5 ,   # Yard
+                        wt:o3.6.6 ,   # Storage
+                        wt:o3.6.7 ,   # Porter office
+                        wt:o3.6.8 ,   # Foundry
+                        wt:o3.6.9 ,   # Modelling shed
+                        wt:o3.6.10 ;  # Cashier's office
+    skos:broader        wt:o3 .
 
-wt:n3.6.1 a skos:Concept ;        # Passage/border
+wt:o3.6.1 a skos:Concept ;          # Passage, border
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.1" ;
-    skos:prefLabel      "Passage/Grenze"@de ;
-    skos:narrower       wt:n3.6.1.1 , # Weg
-                        wt:n3.6.1.2 , # Tor
-                        wt:n3.6.1.3 ; # Grenze
-    skos:broader        wt:n3.6 .
-    
-wt:n3.6.1.1 a skos:Concept ;          # Weg
+    skos:notation       "o3.6.1" ;
+    skos:prefLabel      "Passage, Grenze"@de ;
+    skos:narrower       wt:o3.6.1.1 , # Weg
+                        wt:o3.6.1.2 , # Tor
+                        wt:o3.6.1.3 ; # Grenze
+    skos:broader        wt:o3.6 .
+
+wt:o3.6.1.1 a skos:Concept ;          # Weg
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.1.1" ;
-    skos:altLabel       "Fabrikweg"@de ;
+    skos:notation       "o3.6.1.1" ;
     skos:prefLabel      "Weg"@de ;
-    skos:broader        wt:n3.6.1 .
+    skos:altLabel       "Fabrikweg"@de ,
+                        "Gang"@de ;
+    skos:broader        wt:o3.6.1 .
 
-wt:n3.6.1.2 a skos:Concept ;          # Tor
+wt:o3.6.1.2 a skos:Concept ;          # Tor
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.1.2" ;
+    skos:notation       "o3.6.1.2" ;
     skos:prefLabel      "Tor"@de ;
-    skos:broader        wt:n3.6.1 .
+    skos:broader        wt:o3.6.1 .
 
-wt:n3.6.1.3 a skos:Concept ;          # Grenze
+wt:o3.6.1.3 a skos:Concept ;          # Grenze
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.1.3" ;
+    skos:notation       "o3.6.1.3" ;
     skos:altLabel       "Zaun"@de ,
                         "Mauer"@de ;
     skos:prefLabel      "Grenze"@de ;
-    skos:broader        wt:n3.6.1 .
+    skos:broader        wt:o3.6.1 .
 
-wt:n3.6.2 a skos:Concept ;          # Werksgelände
+wt:o3.6.2 a skos:Concept ;          # Werksgelände
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.2" ;
-    skos:altLabel       "Gelände"@de ;
+    skos:notation       "o3.6.2" ;
     skos:prefLabel      "Werksgelände"@de ;
-    skos:broader        wt:n3.6 .
+    skos:altLabel       "Gelände"@de ,
+                        "Etablissement"@de ,
+                        "Lokalität"@de ,
+                        "Localität"@de ,
+                        "Fabriklokalität"@de ,
+                        "Fabriklocalität"@de ,
+                        "Fabrikraum"@de ,
+                        "Fabrikräumlichkeiten"@de ,
+                        "Fabrikterrain"@de ,
+                        "Fabrikgrundstück"@de ;
+    skos:broader        wt:o3.6 .
 
-wt:n3.6.3 a skos:Concept ;          # Kesselhaus
+wt:o3.6.3 a skos:Concept ;          # Kesselhaus
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.3" ;
+    skos:notation       "o3.6.3" ;
     skos:prefLabel      "Kesselhaus"@de ;
-    skos:broader        wt:n3.6 .
+    skos:broader        wt:o3.6 .
 
-wt:n3.6.4 a skos:Concept ;          # Werkstatt
+wt:o3.6.4 a skos:Concept ;          # Werkstatt
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.4" ;
+    skos:notation       "o3.6.4" ;
     skos:prefLabel      "Werkstatt"@de ;
-    skos:broader        wt:n3.6 .
+    skos:altLabel       "Holzbearbeitungswerkstatt"@de ;
+    skos:broader        wt:o3.6 .
 
-wt:n3.6.5 a skos:Concept ;          # Hof
+wt:o3.6.5 a skos:Concept ;          # Hof
     skos:inScheme       wt:scheme ;
-    skos:notation       "3.6.5" ;
+    skos:notation       "o3.6.5" ;
     skos:prefLabel      "Hof"@de ;
-    skos:broader        wt:n3.6 .
+    skos:altLabel       "Fabrikhof"@de ;
+    skos:broader        wt:o3.6 .
 
+wt:o3.6.6 a skos:Concept ;          # Lager, Magazin
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.6.6" ;
+    skos:prefLabel      "Lager, Magazin"@de ;
+    skos:altLabel       "Magazin"@de ,
+                        "Lager"@de ,
+                        "Holzlagerplatz"@de ;
+    skos:broader        wt:o3.6 .
 
+wt:o3.6.7 a skos:Concept ;          # Pförtnerstube
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.6.7" ;
+    skos:prefLabel      "Pförtnerstube"@de ,
+                        "Porter's lodge"@en ;
+    skos:altLabel       "Pförtnerzimmer"@de ,
+                        "Portier-Hause"@de ,
+                        "Portier-Haus"@de ;
+    skos:broader        wt:o3.6 .
 
-wt:n4 a skos:Concept ;        # Preskription
+wt:o3.6.8 a skos:Concept ;          # Gießerei
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.6.8" ;
+    skos:prefLabel      "Gießerei"@de ,
+                        "Foundry"@en ;
+    skos:altLabel       "Gießereibetrieb"@de ;
+    skos:broader        wt:o3.6 .
+
+wt:o3.6.9 a skos:Concept ;          # Modellraum
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.6.9" ;
+    skos:prefLabel      "Modellraum"@de ;
+    skos:altLabel       "Modellschuppen"@de ;
+    skos:broader        wt:o3.6 .
+
+wt:o3.6.10 a skos:Concept ;         # Zahlstube
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.6.10" ;
+    skos:prefLabel      "Zahlstube"@de ,
+                        "Cashier's office"@en ;
+    skos:altLabel       "Zahllokal"@de ;
+    skos:broader        wt:o3.6 .
+
+wt:o3.7 a skos:Concept ;          # Papiere
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.7" ;
+    skos:prefLabel      "Papiere"@de ,
+                        "Paperwork"@en ;
+    skos:altLabel       "Dokumente"@de ,
+                        "Documents"@en ;
+    skos:narrower       wt:o3.7.1 ,   # Arbeitsbuch
+                        wt:o3.7.2 ,   # Ausweis
+                        wt:o3.7.3 ,   # Versicherungsdokument
+                        wt:o3.7.4 ;   # Zeugnis
+    skos:broader        wt:o3 .
+
+wt:o3.7.1 a skos:Concept ;          # Arbeitsbuch
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.7.1" ;
+    skos:prefLabel      "Arbeitsbuch"@de ;
+    skos:broader        wt:o3.7 .
+
+wt:o3.7.2 a skos:Concept ;          # Ausweis
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.7.2" ;
+    skos:prefLabel      "Ausweis"@de ;
+    skos:broader        wt:o3.7 .
+
+wt:o3.7.3 a skos:Concept ;          # Versicherungsdokument
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.7.3" ;
+    skos:prefLabel      "Versicherungsdokument"@de ;
+    skos:broader        wt:o3.7 .
+
+wt:o3.7.4 a skos:Concept ;          # Zeugnis
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.7.4" ;
+    skos:prefLabel      "Zeugnis"@de ;
+    skos:broader        wt:o3.7 .
+
+wt:o3.8 a skos:Concept ;          # Behälter
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.8" ;
+    skos:prefLabel      "Behälter"@de ,
+                        "Container"@en ;
+    skos:narrower       wt:o3.8.1 ,   # Kasten
+                        wt:o3.8.2 ;   # Schrank
+    skos:broader        wt:o3 .
+
+wt:o3.8.1 a skos:Concept ;          # Kasten
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.8.1" ;
+    skos:prefLabel      "Kasten"@de ,
+                        "Box"@en ;
+    skos:broader        wt:o3.8 .
+
+wt:o3.8.2 a skos:Concept ;          # Schrank
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.8.2" ;
+    skos:prefLabel      "Schrank"@de ,
+                        "Cabinet"@en ;
+    skos:broader        wt:o3.8 .
+
+wt:o3.9 a skos:Concept ;          # Fahrzeug
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.9" ;
+    skos:prefLabel      "Fahrzeug"@de ,
+                        "Vehicle"@en ;
+    skos:narrower       wt:o3.9.1 ;   # Bicycle
+    skos:broader        wt:o3 .
+
+wt:o3.9.1 a skos:Concept ;          # Fahrrad
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.9.1" ;
+    skos:prefLabel      "Fahrrad"@de ,
+                        "Bicycle"@en ;
+    skos:broader        wt:o3.9 .
+
+wt:o3.10 a skos:Concept ;         # Lohntüte
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.10" ;
+    skos:prefLabel      "Lohntüte"@de ,
+                        "Pay envelope"@en ;
+    skos:broader        wt:o3 .
+
+wt:o3.11 a skos:Concept ;         # Produkt
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.11" ;
+    skos:prefLabel      "Produkt"@de ,
+                        "Product"@en ;
+    skos:narrower       wt:o3.11.1 ,   # Drawing
+                        wt:o3.11.2 ;   # Model
+    skos:broader        wt:o3 .
+
+wt:o3.11.1 a skos:Concept ;         # Zeichnung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.11.1" ;
+    skos:prefLabel      "Zeichnung"@de ,
+                        "Drawing"@en ;
+    skos:broader        wt:o3.11 .
+
+wt:o3.11.2 a skos:Concept ;         # Modell
+    skos:inScheme       wt:scheme ;
+    skos:notation       "o3.11.2" ;
+    skos:prefLabel      "Modell"@de ,
+                        "Model"@en ;
+    skos:broader        wt:o3.11 .
+
+wt:p4 a skos:Concept ;          # Preskription
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "4" ;
+    skos:notation       "p4" ;
     skos:prefLabel      "Präskriptive Bewertung"@de ;
     skos:scopeNote      "Normative Einordnung eines Sachverhalts in normativen Regeln"@de ;
-    skos:narrower       wt:n4.1 , # Obligation
-                        wt:n4.2 , # Prohibition
-                        wt:n4.3 , # Permission
-                        wt:n4.4 . # Derogation
+    skos:narrower       wt:p4.1 , # Obligation
+                        wt:p4.2 , # Prohibition
+                        wt:p4.3 , # Permission
+                        wt:p4.4 , # Derogation
+                        wt:p4.5 , # Violation
+                        wt:p4.6 . # Compliance
 
-wt:n4.1 a skos:Concept ;          # Gebot
+wt:p4.1 a skos:Concept ;          # Gebot
     skos:inScheme       wt:scheme ;
-    skos:notation       "4.1" ;
+    skos:notation       "p4.1" ;
     skos:prefLabel      "Gebot"@de ;
-    skos:broader        wt:n4 .
+    skos:broader        wt:p4 .
 
-wt:n4.2 a skos:Concept ;          # Verbot
+wt:p4.2 a skos:Concept ;          # Verbot
     skos:inScheme       wt:scheme ;
-    skos:notation       "4.2" ;
+    skos:notation       "p4.2" ;
     skos:prefLabel      "Verbot"@de ;
-    skos:broader        wt:n4 .
+    skos:broader        wt:p4 .
 
-wt:n4.3 a skos:Concept ;          # Erlaubnis
+wt:p4.3 a skos:Concept ;          # Erlaubnis
     skos:inScheme       wt:scheme ;
-    skos:notation       "4.3" ;
+    skos:notation       "p4.3" ;
     skos:prefLabel      "Erlaubnis"@de ;
-    skos:broader        wt:n4 .
+    skos:broader        wt:p4 .
 
-wt:n4.4 a skos:Concept ;          # Derogation
+wt:p4.4 a skos:Concept ;          # Derogation
     skos:inScheme       wt:scheme ;
-    skos:notation       "4.4" ;
-    skos:altLabel       "Ausnahme"@de ;
+    skos:notation       "p4.4" ;
     skos:prefLabel      "Derogation"@de;
-    skos:broader        wt:n4 .
+    skos:altLabel       "Ausnahme"@de ;
+    skos:broader        wt:p4 .
 
+wt:p4.5 a skos:Concept ;          # Verstoß
+    skos:inScheme       wt:scheme ;
+    skos:notation       "p4.5" ;
+    skos:prefLabel      "Verstoß"@de ,
+                        "Violation"@en ;
+    skos:altLabel       "Verstöße"@de ,
+                        "Zuwiderhandlung"@de ,
+                        "Zuwiderhandlungen"@de ,
+                        "Transgression"@en ,
+                        "Infringement"@en ;
+    skos:broader        wt:p4 .
 
+wt:p4.6 a skos:Concept ;          # Erfüllung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "p4.6" ;
+    skos:prefLabel      "Erfüllung"@de ,
+                        "Compliance"@en ;
+    skos:altLabel       "Befolgung"@de ,
+                        "Übereinstimmung"@de ;
+    skos:broader        wt:p4 .
 
-wt:n5 a skos:Concept ;        # Condition of force
+wt:m5 a skos:Concept ;        # Condition of force
     skos:inScheme       wt:scheme ;
     skos:topConceptOf   wt:scheme ;
-    skos:notation       "5" ;
+    skos:notation       "m5" ;
     skos:prefLabel      "Bedingung der Geltung"@de ;
-    skos:narrower       wt:n5.1 , # Time
-                        wt:n5.2 , # Ground norm
-                        wt:n5.3 . # Dispute resolution
+    skos:narrower       wt:m5.1 , # Time
+                        wt:m5.2 , # Ground norm
+                        wt:m5.3 . # Dispute resolution
 
-wt:n5.1 a skos:Concept ;          # Geltungszeitregel
+wt:m5.1 a skos:Concept ;          # Geltungszeitregel
     skos:inScheme       wt:scheme ;
-    skos:notation       "5.1" ;
+    skos:notation       "m5.1" ;
     skos:altLabel       "Inkrafttreten"@de ;
     skos:prefLabel      "Geltungszeitregel"@de ;
-    skos:broader        wt:n5 .
+    skos:broader        wt:m5 .
 
-wt:n5.2 a skos:Concept ;          # Ermächtigungsnorm
+wt:m5.2 a skos:Concept ;          # Rahmengesetzgebung
     skos:inScheme       wt:scheme ;
-    skos:notation       "5.2" ;
-    skos:altLabel       "Rechtsgrundlage"@de ;
-    skos:prefLabel      "Ermächtigungsnorm"@de ;
-    skos:broader        wt:n5 .
+    skos:notation       "m5.2" ;
+    skos:prefLabel      "Rahmengesetzgebung"@de ;
+    skos:altLabel       "Rechtsgrundlage"@de ,
+                        "Ermächtigungsnorm"@de ;
+    skos:narrower       wt:m5.2.1 , # gesetzlich
+                        wt:m5.2.2 ; # tariflich
+    skos:broader        wt:m5 .
 
-wt:n5.3 a skos:Concept ;          # Streitbeilegung
+wt:m5.2.1 a skos:Concept ;          # gesetzlich
     skos:inScheme       wt:scheme ;
-    skos:notation       "5.3" ;
+    skos:notation       "m5.2.1" ;
+    skos:prefLabel      "gesetzlicher Rahmen"@de ;
+    skos:altLabel       "öffentliche Rahmengesetzgebung"@de ;
+    skos:broader        wt:m5.2 .
+
+wt:m5.2.2 a skos:Concept ;          # tariflich
+    skos:inScheme       wt:scheme ;
+    skos:notation       "m5.2.2" ;
+    skos:prefLabel      "tariflicher Rahmen"@de ;
+    skos:altLabel       "tarifliche Rahmengesetzgebung"@de ;
+    skos:broader        wt:m5.2 .
+
+wt:m5.3 a skos:Concept ;          # Streitbeilegung
+    skos:inScheme       wt:scheme ;
+    skos:notation       "m5.3" ;
     skos:prefLabel      "Streitbeilegung"@de ;
-    skos:broader        wt:n5 .
+    skos:broader        wt:m5 .
