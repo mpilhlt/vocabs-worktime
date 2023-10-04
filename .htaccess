@@ -1,4 +1,14 @@
-DirectoryIndex index
+Options +FollowSymLinks +MultiViews +Indexes
+
+DirectoryIndex index scheme
+
+AddLanguage da .da
+AddLanguage de .de
+AddLanguage en .en
+AddLanguage fr .fr
+AddLanguage nl .nl
+AddLanguage sv .sv
+
 AddType text/index .index
 AddType application/json .json
 AddType application/ld+json .jsonld
