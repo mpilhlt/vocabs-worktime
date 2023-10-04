@@ -250,7 +250,6 @@ wtr:r2.16 a skos:Concept ;         # Beamter
     skos:notation       "r2.16" ;
     skos:prefLabel      "Beamter"@de ;
     skos:altLabel       "Aufsichtsbeamter"@de ,
-                        "Beamter"@de ,
                         "Werkbeamter"@de ,
                         "Betriebsbeamter"@de ;
     skos:broader        wtr:r2 .

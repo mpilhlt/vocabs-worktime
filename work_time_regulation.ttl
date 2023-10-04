@@ -886,7 +886,6 @@ wt:r2.16 a skos:Concept ;         # Beamter
     owl:sameAs          wtr:r2.16 ;
     skos:prefLabel      "Beamter"@de ;
     skos:altLabel       "Aufsichtsbeamter"@de ,
-                        "Beamter"@de ,
                         "Werkbeamter"@de ,
                         "Betriebsbeamter"@de ;
     skos:broader        wt:r2 .
