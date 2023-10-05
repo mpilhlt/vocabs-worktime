@@ -1,20 +1,14 @@
 {
-  "id": "https://w3id.org/mpilhlt/worktime_activity/a1.7",
+  "id": "https://w3id.org/mpilhlt/worktime/a1.15",
   "type": "Concept",
   "prefLabel": {
-    "de": "Säubern",
-    "en": "Cleaning"
-  },
-  "altLabel": {
-    "de": [
-      "Reinigen"
-    ]
+    "de": "Schlafen"
   },
   "notation": [
-    "a1.7"
+    "a1.15"
   ],
   "broader": {
-    "id": "https://w3id.org/mpilhlt/worktime_activity/a1",
+    "id": "https://w3id.org/mpilhlt/worktime/a1",
     "prefLabel": {
       "de": "Tätigkeit",
       "en": "Activity"
@@ -22,16 +16,16 @@
   },
   "inScheme": [
     {
-      "id": "https://w3id.org/mpilhlt/worktime_activity/scheme",
+      "id": "https://w3id.org/mpilhlt/worktime/scheme",
       "title": {
-        "de": "MPILHLT Begriffe der Arbeitsregulierung, Tätigkeiten",
-        "en": "MPILHLT concepts of regulations of work, activities"
+        "de": "MPILHLT Begriffe der Arbeitsregulierung",
+        "en": "MPILHLT concepts of regulations of work"
       }
     }
   ],
   "inSchemeAll": [
     {
-      "id": "https://w3id.org/mpilhlt/worktime_activity/scheme"
+      "id": "https://w3id.org/mpilhlt/worktime/scheme"
     }
   ],
   "@context": {

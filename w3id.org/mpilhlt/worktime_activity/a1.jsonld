@@ -59,8 +59,8 @@
     {
       "id": "https://w3id.org/mpilhlt/worktime_activity/a1.7",
       "prefLabel": {
-        "de": "säubern",
-        "en": "cleaning"
+        "de": "Säubern",
+        "en": "Cleaning"
       }
     },
     {
@@ -105,6 +105,12 @@
       "prefLabel": {
         "de": "Melden (Tätigkeit)",
         "en": "reporting"
+      }
+    },
+    {
+      "id": "https://w3id.org/mpilhlt/worktime_activity/a1.15",
+      "prefLabel": {
+        "de": "Schlafen"
       }
     }
   ],

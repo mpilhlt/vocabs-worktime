@@ -2,12 +2,12 @@
   "id": "https://w3id.org/mpilhlt/worktime/a1.7",
   "type": "Concept",
   "prefLabel": {
-    "de": "säubern",
-    "en": "cleaning"
+    "de": "Säubern",
+    "en": "Cleaning"
   },
   "altLabel": {
     "de": [
-      "reinigen"
+      "Reinigen"
     ]
   },
   "notation": [

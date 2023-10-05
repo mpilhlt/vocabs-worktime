@@ -1,17 +1,11 @@
 {
-  "id": "https://w3id.org/mpilhlt/worktime_activity/a1.7",
+  "id": "https://w3id.org/mpilhlt/worktime_activity/a1.15",
   "type": "Concept",
   "prefLabel": {
-    "de": "Säubern",
-    "en": "Cleaning"
-  },
-  "altLabel": {
-    "de": [
-      "Reinigen"
-    ]
+    "de": "Schlafen"
   },
   "notation": [
-    "a1.7"
+    "a1.15"
   ],
   "broader": {
     "id": "https://w3id.org/mpilhlt/worktime_activity/a1",
