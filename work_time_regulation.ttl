@@ -509,7 +509,8 @@ wt:a1 a skos:Concept ;        # Activity
                         wt:a1.11 , # Tarrying/Walking/Accessing
                         wt:a1.12 , # Bringing/Removing
                         wt:a1.13 , # Selling
-                        wt:a1.14 . # Reporting
+                        wt:a1.14 , # Reporting
+                        wt:a1.15 . # Sleeping
 
 wt:a1.1 a skos:Concept ;          # Rauchen
     skos:inScheme       wt:scheme ;
@@ -581,9 +582,9 @@ wt:a1.7 a skos:Concept ;          # Maschine säubern
     skos:inScheme       wt:scheme ;
     skos:notation       "a1.7" ;
     owl:sameAs          wta:a1.7 ;
-    skos:prefLabel      "säubern"@de ,
-                        "cleaning"@en ;
-    skos:altLabel       "reinigen"@de ;
+    skos:prefLabel      "Säubern"@de ,
+                        "Cleaning"@en ;
+    skos:altLabel       "Reinigen"@de ;
     skos:broader        wt:a1 .
 
 wt:a1.8 a skos:Concept ;          # Hochzeit
@@ -650,6 +651,13 @@ wt:a1.14 a skos:Concept ;         # Melden
                         "reporting"@en ;
     skos:altLabel       "Melden"@de ,
                         "Meldung"@de ;
+    skos:broader        wt:a1 .
+
+wt:a1.15 a skos:Concept ;         # Schlafen
+    skos:inScheme       wt:scheme ;
+    skos:notation       "a1.15" ;
+    owl:sameAs          wta:a1.15 ;
+    skos:prefLabel      "Schlafen"@de ;
     skos:broader        wt:a1 .
 
 wt:r2 a skos:Concept ;          # Social Role/Function
