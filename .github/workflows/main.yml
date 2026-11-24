@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 2
       - name: Get changed ttl-files
         id: changed-ttl-files
-        uses: tj-actions/changed-files@v42
+        uses: tj-actions/changed-files@v46
         with:
           files: |
             **/*.ttl
@@ -53,7 +53,7 @@ jobs:
 
       - name: Get changed yml-files
         id: changed-yml-files
-        uses: tj-actions/changed-files@v42
+        uses: tj-actions/changed-files@v46
         with:
           files: |
             **/*.yml
